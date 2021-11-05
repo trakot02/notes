@@ -1,12 +1,21 @@
 ---
-title: Logica
-created: '2021-11-02T20:02:04.439Z'
-modified: '2021-11-03T14:41:32.830Z'
+title: Introduzione
 header-includes:
   - \usepackage{mathtools}
 ---
 
-# Introduzione
+\newcommand{\limplies}{\rightarrow}
+
+- [Logica](#logica)
+  - [Connettivi logici](#connettivi-logici)
+    - [Connetivo *or*](#connetivo-or)
+    - [Connettivo *implies*](#connettivo-implies)
+          - [Nota bene](#nota-bene)
+      - [Esercizio](#esercizio)
+  - [Sintassi e semantica](#sintassi-e-semantica)
+    - [Linguaggio naturale e artificiale](#linguaggio-naturale-e-artificiale)
+
+# Logica
 
 La logica nasce per formalizzare certi concetti comuni del ragionamento matematico, nonché il suo linguaggio. Per questo la logica permette di determinare ciò che è vero o falso in modo totalmente **non ambiguo**.
 
@@ -22,7 +31,7 @@ $$
 (\alpha\lor\beta)
 $$
 
-Dove $\alpha, \beta$ sono le due espressioni.
+Dove $\alpha,\beta$ sono le due espressioni.
 
 In un dialogo comune il connettivo *or* indica che **solamente una** situazione tra le due può avversarsi, si dice quindi che il connettivo è **esclusivo**. Al contrario in linguaggio matematico, può avversarsi *almeno una* delle due situazioni, si dice quindi che il connettivo *or* è **inclusivo**.
 
@@ -31,10 +40,10 @@ In un dialogo comune il connettivo *or* indica che **solamente una** situazione 
 Data la frase: "Il sorgere del Sole *implica* che è giunta l'alba", notiamo che è della forma
 
 $$
-(\alpha\rightarrow\beta)
+(\alpha\limplies\beta)
 $$
 
-Dove $\alpha, \beta$ sono le due espressioni, e vengono chiamate:
+Dove $\alpha,\beta$ sono le due espressioni, e vengono chiamate:
 
 - $\alpha$ la premessa
 - $\beta$ la conclusione
@@ -50,27 +59,24 @@ Quando la premessa non si avvera, l'implicazione viene comunque rispettata perch
 Infatti possiamo scrivere che:
 
 $$
-(\alpha\rightarrow\beta)\iff((\neg\alpha)\lor\beta)
+(\alpha\limplies\beta)\iff((\neg\alpha)\lor\beta)
 $$
 
 In altre parole, un'implicazione è vera quando o non si avvera la premessa, quando la conclusione è corretta, oppure entrambe.
 
 #### Esercizio
 
-Vogliamo semplificare la seguente proposizione:
-
-$$
-\phi\coloneqq((\alpha\rightarrow\beta)\lor(\beta\rightarrow\alpha))
-$$
+Vogliamo semplificare la proposizione $\phi=((\alpha\limplies\beta)\lor(\beta\limplies\alpha))$.
 
 Svolgimento:
 
 $$
 \begin{aligned}
-  \phi
-  &=((\alpha\rightarrow\beta)\lor(\beta\rightarrow\alpha))\\
-  &=(((\neg\alpha)\lor\beta)\lor((\neg\beta)\lor\alpha))\\
-  &=(\alpha\lor\beta\lor(\neg\alpha)\lor(\neg\beta))
+    \phi
+    &=((\alpha\limplies\beta)\lor(\beta\limplies\alpha))\\
+    &=(((\neg\alpha)\lor\beta)\lor((\neg\beta)\lor\alpha))\\
+    &=(\alpha\lor\beta\lor(\neg\alpha)\lor(\neg\beta))\\
+    &=T
 \end{aligned}
 $$
 
