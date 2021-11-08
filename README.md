@@ -63,7 +63,7 @@ Al momento della conversione da file *Markdown* a *PDF* si possono utilizzare du
 
 #### File singolo
 
-Per convertire è un singolo file **importante specificare l'estensione PDF** ed eseguire:
+Per convertire un singolo file è **importante specificare l'estensione PDF** ed eseguire:
 
 ```sh
 make source/{nome-corso}/{numero}-{argomento}.pdf
