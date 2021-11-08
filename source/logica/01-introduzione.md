@@ -1,10 +1,6 @@
 ---
 title: Introduzione
-header-includes:
-  - \usepackage{mathtools}
 ---
-
-\newcommand{\limplies}{\rightarrow}
 
 - [Logica](#logica)
   - [Connettivi logici](#connettivi-logici)
@@ -59,8 +55,8 @@ Quando la premessa non si avvera, l'implicazione viene comunque rispettata perch
 Infatti possiamo scrivere che:
 
 $$
-(\alpha\limplies\beta)\iff((\neg\alpha)\lor\beta)
-$$
+(\alpha\limplies\beta)\iff((\lnot\alpha)\lor\beta)
+$$ {#eq:impl_def}
 
 In altre parole, un'implicazione è vera quando o non si avvera la premessa, quando la conclusione è corretta, oppure entrambe.
 
@@ -72,15 +68,15 @@ Svolgimento:
 
 $$
 \begin{aligned}
-    \phi
-    &=((\alpha\limplies\beta)\lor(\beta\limplies\alpha))\\
-    &=(((\neg\alpha)\lor\beta)\lor((\neg\beta)\lor\alpha))\\
-    &=(\alpha\lor\beta\lor(\neg\alpha)\lor(\neg\beta))\\
-    &=T
+  \phi
+  &=((\alpha\limplies\beta)\lor(\beta\limplies\alpha))\\
+  &=(((\lnot\alpha)\lor\beta)\lor((\lnot\beta)\lor\alpha))\\
+  &=(\alpha\lor\beta\lor(\lnot\alpha)\lor(\lnot\beta))\\
+  &=T
 \end{aligned}
-$$
+$$ {#eq:impl_example}
 
-Sono presenti tutte le combinazioni di $\alpha$ e $\beta$ e deve avverarsene almeno una per rendere tutto corretto, di conseguenza è verificata per qualsiasi valore di $\alpha$ e $\beta$.
+Sono presenti tutte le combinazioni di $\alpha$ e $\beta$ e deve avverarsene almeno una per rendere tutto corretto, di conseguenza l'equazione @eq:impl_example è verificata per qualsiasi valore di $\alpha$ e $\beta$.
 
 ## Sintassi e semantica
 

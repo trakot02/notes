@@ -1,16 +1,6 @@
 ---
 title: Conseguenze semantiche
-header-includes:
-  - \usepackage{mathtools}
-  - \usepackage{stmaryrd}
-  - \usepackage{cancel}
 ---
-
-\newcommand{\limplies}{\rightarrow}
-\newcommand{\liff}{\longleftrightarrow}
-\newcommand{\val}[1]{\llbracket\,#1\,\rrbracket}
-\newcommand{\rep}[1]{[\,#1\,]}
-\newcommand{\taut}{\vDash}
 
 - [Ragionamento ipotetico deduttivo](#ragionamento-ipotetico-deduttivo)
   - [Conseguenze semantiche](#conseguenze-semantiche)
@@ -23,10 +13,10 @@ header-includes:
     - [Definizione iterativa](#definizione-iterativa)
       - [Esempio](#esempio-1)
     - [Definizione ricorsiva](#definizione-ricorsiva)
-    - [Teorema](#teorema)
+    - [Lemma](#lemma)
   - [Relazioni di equivalenza](#relazioni-di-equivalenza)
           - [Nota bene](#nota-bene)
-  - [Teorema](#teorema-1)
+    - [Lemma](#lemma-1)
 
 # Ragionamento ipotetico deduttivo
 
@@ -41,17 +31,17 @@ Il ragionamento tipico della matematica è il ragionamento ipotetico-deduttivo, 
 
 Quindi per indicare che da un'ipotesi segue una proposizione si adotta la scrittura $\Gamma\taut{\psi}$, che si legge come "Da $\Gamma$ segue $\psi$".
 
-Possiamo affermare che la valutazione di un'insieme di proposizioni è uguale ad uno se e solamente se la valutazione di tutti i suoi elementi è tale, infatti, dato un insieme $\Gamma$ ed una valutazione $v$:
+Possiamo affermare che la valutazione di un insieme di proposizioni è uguale ad uno se e solamente se la valutazione di tutti i suoi elementi è tale, infatti, dato un insieme $\Gamma$ ed una valutazione $v$:
 
 $$
-\val{\Gamma}_v=1\iff\forall{\phi}\in{\Gamma},\;\val{\phi}_v=1
+\valu{\Gamma}_v=1\iff\forall{\phi}\in{\Gamma},\;\valu{\phi}_v=1
 $$
 
 L'espressione $\Gamma\taut{\psi}$ si dice conseguenza semantica se e solamente se $\psi$ è verificata da ogni valutazione $v$ che verificha anche $\Gamma$, per cui scriviamo:
 
 $$
-\forall{v}\val{\Gamma}_v=1\implies\val{\psi}_v=1
-$$
+\forall{v}\valu{\Gamma}_v=1\implies\valu{\psi}_v=1
+$$ {#eq:consequence}
 
 #### Esempio
 
@@ -61,11 +51,11 @@ Svolgimento:
 
 $$
 \begin{aligned}
-  \val{\alpha\limplies\beta,\alpha}_v=1
-  &\iff\val{\alpha\limplies\beta}_v=1\text{ and }\val{\alpha}_v=1\\
-  &\iff(\cancel{\val{\alpha}_v=0}\text{ or }\val{\beta}_v=1)\text{ and }\val{\alpha}_v=1\\
-  &\implies\val{\beta}_v=1\text{ and }\val{\alpha}_v=1\\
-  &\implies\val{\beta}_v=1
+  \valu{\alpha\limplies\beta,\alpha}_v=1
+  &\iff\valu{\alpha\limplies\beta}_v=1\text{ and }\valu{\alpha}_v=1\\
+  &\iff(\cancel{\valu{\alpha}_v=0}\text{ or }\valu{\beta}_v=1)\text{ and }\valu{\alpha}_v=1\\
+  &\implies\valu{\beta}_v=1\text{ and }\valu{\alpha}_v=1\\
+  &\implies\valu{\beta}_v=1
   &\square
 \end{aligned}
 $$
@@ -78,12 +68,12 @@ Svolgimento:
 
 $$
 \begin{aligned}
-    \forall{v}\val{\Gamma,\alpha}_v=1\implies\val{\beta}_v=1
-    &\iff(\val{\Gamma}_v=1\text{ and }\val{\alpha}_v=1)\implies\val{\beta}_v=1\\
-    &\iff(\val{\Gamma}_v\ne{1}\text{ or }\underline{\val{\alpha}_v=0})\text{ or }\underline{\val{\beta}_v=1}\\
-    &\iff\val{\Gamma}_v\ne{1}\text{ or }\val{\alpha\limplies\beta}_v=1\\
-    &\implies\Gamma\taut{\alpha\limplies\beta}
-    &\square
+  \forall{v}\valu{\Gamma,\alpha}_v=1\implies\valu{\beta}_v=1
+  &\iff(\valu{\Gamma}_v=1\text{ and }\valu{\alpha}_v=1)\implies\valu{\beta}_v=1\\
+  &\iff(\valu{\Gamma}_v\ne{1}\text{ or }\underline{\valu{\alpha}_v=0})\text{ or }\underline{\valu{\beta}_v=1}\\
+  &\iff\valu{\Gamma}_v\ne{1}\text{ or }\valu{\alpha\limplies\beta}_v=1\\
+  &\implies\Gamma\taut{\alpha\limplies\beta}
+  &\square
 \end{aligned}
 $$
 
@@ -95,23 +85,23 @@ A livello teorico esistono infinite tautologie, ma tra le più importanti citiam
 
 $$
 \begin{aligned}
-    \neg(\phi\land\psi)&\liff(\neg\phi\lor\neg\psi)\\
-    \neg(\phi\lor\psi)&\liff(\neg\phi\land\neg\psi)\\
+  \lnot(\phi\land\psi)&\liff(\lnot\phi\lor\lnot\psi)\\
+  \lnot(\phi\lor\psi)&\liff(\lnot\phi\land\lnot\psi)\\
 \end{aligned}
 $$
 
 - Involutività della negazione
 
 $$
-\neg(\neg\alpha)\liff\alpha
+\lnot(\lnot\alpha)\liff\alpha
 $$
 
 - Commutatività
 
 $$
 \begin{aligned}
-    (\phi\land\psi)&\liff(\psi\land\phi)\\
-    (\phi\lor\psi)&\liff(\psi\lor\phi)\\
+  (\phi\land\psi)&\liff(\psi\land\phi)\\
+  (\phi\lor\psi)&\liff(\psi\lor\phi)\\
 \end{aligned}
 $$
 
@@ -119,8 +109,8 @@ $$
 
 $$
 \begin{aligned}
-    \phi\land(\psi\lor\sigma)&\liff(\phi\land\psi)\lor(\phi\land\sigma)\\
-    \phi\lor(\psi\land\sigma)&\liff(\phi\lor\psi)\land(\phi\lor\sigma)\\
+  \phi\land(\psi\lor\sigma)&\liff(\phi\land\psi)\lor(\phi\land\sigma)\\
+  \phi\lor(\psi\land\sigma)&\liff(\phi\lor\psi)\land(\phi\lor\sigma)\\
 \end{aligned}
 $$
 
@@ -128,8 +118,8 @@ $$
 
 $$
 \begin{aligned}
-    \phi\land(\psi\land\sigma)&\liff(\phi\land\psi)\land\sigma\\
-    \phi\lor(\psi\lor\sigma)&\liff(\phi\lor\psi)\lor\sigma
+  \phi\land(\psi\land\sigma)&\liff(\phi\land\psi)\land\sigma\\
+  \phi\lor(\psi\lor\sigma)&\liff(\phi\lor\psi)\lor\sigma
 \end{aligned}
 $$
 
@@ -138,16 +128,16 @@ $$
 Dato un insieme di simboli generici $\Omega$, una stringa su questo insieme è una sequenza di finita lunghezza $n$, della forma:
 
 $$
-s=c_1\;c_2\;\dots\;c_n\\
-$$
+s=c_1\;c_2\;\dots\;c_n
+$$ {#eq:string}
 
-dove per ogni indice $i$ appartenente all'intervallo $(1,n)$ il simbolo $c_i$, si trova in $\Omega$. 
+dove per ogni indice $i$ appartenente all'intervallo $(1,n)$ il simbolo $c_i$, si trova in $\Omega$.
 
 Di conseguenza, dato un simbolo $a\in\Omega$ si dice occorrenza della stringa $s$, ogni coppia $(a,i)$ tale per cui il simbolo di partenza $a=c_i$.
 
 ## Sostituzione
 
-Siano quindi $\phi,\psi\in{PROP}$ e $p\in\phi$, si scrive $\phi\rep{\psi/p}$ per indicare che il simbolo $p$ viene rimpiazzato dalla proposizione $\psi$.
+Siano quindi $\phi,\psi\in{PROP}$ e $p\in\phi$, si scrive $\phi\repl{\psi}{p}$ per indicare che il simbolo $p$ viene rimpiazzato dalla proposizione $\psi$.
 
 ### Definizione iterativa
 
@@ -165,19 +155,15 @@ Svolgimento:
 
 Sia $*$ un connettivo tra $\{\land,\lor,\limplies\}$, allora:
 
-1. $\phi\,\rep{\psi/p}\;=\begin{dcases}\bot\text{ iff }&\phi=\bot\\\phi\text{ iff }&\phi\in{AT},\,\phi\ne{p}\\\psi\text{ iff }&\phi\in{AT},\,\phi=p\end{dcases}$
+1. $\phi\repl{\psi}{p}=\begin{dcases}\bot\text{ iff }&\phi=\bot\\\phi\text{ iff }&\phi\in{AT},\,\phi\ne{p}\\\psi\text{ iff }&\phi\in{AT},\,\phi=p\end{dcases}$
 
-2. $(\neg\phi)\rep{\psi/p}\;=\neg(\;\phi\rep{\psi/p}\;)$
+2. $(\lnot\phi)\repl{\psi}{p}=\lnot(\;\repl{\psi}{p}\;)$
 
-3. $(\phi_1*\phi_2)\rep{\psi/p} = (\;\phi_1\rep{\psi/p}*\phi_2\rep{\psi*p}\;)$
+3. $(\phi_1*\phi_2)\repl{\psi}{p} = (\;\phi_1\repl{\psi}{p}*\phi_2\repl{\psi}{p}\;)$
 
-### Teorema
+### Lemma
 
-Sia $\psi_1\liff\psi_2=(\psi_1\limplies\psi_2)\land(\psi_2\limplies\psi_1)$, allora dato $\taut{\psi_1\liff\psi_2}$, vale:
-
-$$
-\taut{\phi\rep{\psi_1/p}\liff\phi\rep{\psi_2/p}}
-$$
+Sia $\psi_1\liff\psi_2=(\psi_1\limplies\psi_2)\land(\psi_2\limplies\psi_1)$, allora dato $\taut{\psi_1\liff\psi_2}$, vale: $\taut{\phi\repl{\psi}{p}\liff\phi\repl{\psi}{p}}$
 
 ## Relazioni di equivalenza
 
@@ -191,7 +177,7 @@ Sia $A$ un insieme e sia $R\subseteq{A\times{A}}$, quest'ultima viene chiamata r
 
 > Un esempio di relazione di equivalenza è la similitudine tra triangoli.
 
-## Teorema
+### Lemma
 
 Si dice che $\phi$ è equivalente a $\psi$ se e solamente se $\phi\liff\psi$ è una tautologia, infatti scriviamo che:
 
