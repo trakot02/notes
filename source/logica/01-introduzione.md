@@ -6,7 +6,7 @@ title: Introduzione
   - [Connettivi logici](#connettivi-logici)
     - [Connetivo *or*](#connetivo-or)
     - [Connettivo *implies*](#connettivo-implies)
-          - [Nota bene](#nota-bene)
+          - [*Nota bene*](#nota-bene)
       - [Esercizio](#esercizio)
   - [Sintassi e semantica](#sintassi-e-semantica)
     - [Linguaggio naturale e artificiale](#linguaggio-naturale-e-artificiale)
@@ -48,7 +48,7 @@ Il connettivo *implies* indica che quando la premessa si avvera, allora **deve**
 
 Quando la premessa non si avvera, l'implicazione viene comunque rispettata perché il rapporto tra premessa e conclusione non è stato smentito, infatti considerando l'esempio sopracitato, nel caso in cui il sole non sia ancora sorto, possiamo comunque dire che la frase è corretta.
 
-###### Nota bene
+*Nota bene*
 
 > L'implicazione **non** si avvera quando la premessa è veritiera ma la conclusione no. Questo perché la premessa si è verificata e il legame con la conclusione può essere smentito, per esempio: "Forte pioggia *implica* che il sole sta calando" non è un'implicazione corretta.
 

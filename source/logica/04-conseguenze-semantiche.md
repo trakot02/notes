@@ -4,7 +4,7 @@ title: Conseguenze semantiche
 
 - [Ragionamento ipotetico deduttivo](#ragionamento-ipotetico-deduttivo)
   - [Conseguenze semantiche](#conseguenze-semantiche)
-          - [Notazione](#notazione)
+          - [*Notazione*](#notazione)
       - [Esempio](#esempio)
       - [Esercizio](#esercizio)
     - [Tautologie notevoli](#tautologie-notevoli)
@@ -15,7 +15,7 @@ title: Conseguenze semantiche
     - [Definizione ricorsiva](#definizione-ricorsiva)
     - [Lemma](#lemma)
   - [Relazioni di equivalenza](#relazioni-di-equivalenza)
-          - [Nota bene](#nota-bene)
+          - [*Nota bene*](#nota-bene)
     - [Lemma](#lemma-1)
 
 # Ragionamento ipotetico deduttivo
@@ -24,7 +24,7 @@ Il ragionamento tipico della matematica è il ragionamento ipotetico-deduttivo, 
 
 ## Conseguenze semantiche
 
-###### Notazione
+###### *Notazione*
 
 - $\Gamma,\Sigma,\Delta$ rappresentano insiemi arbitrari di proposizioni
 - $\alpha,\beta,\phi,\psi$ rappresentano generiche proposizioni
@@ -173,7 +173,7 @@ Sia $A$ un insieme e sia $R\subseteq{A\times{A}}$, quest'ultima viene chiamata r
 - È transitiva: $\forall{a,b,c}\in{a},(aRb,bRc)\implies{aRc}$
 - E simmetrica: $\forall{a,b}\in{A},(aRb,bRa)$
 
-###### Nota bene
+*Nota bene*
 
 > Un esempio di relazione di equivalenza è la similitudine tra triangoli.
 

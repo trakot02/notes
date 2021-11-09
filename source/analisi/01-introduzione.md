@@ -2,6 +2,18 @@
 title: Introduzione
 ---
 
+- [Quantificatori](#quantificatori)
+      - [Esempio](#esempio)
+      - [Esempio](#esempio-1)
+          - [*Nota bene*](#nota-bene)
+    - [Negazioni di un enunciato con quantificatori](#negazioni-di-un-enunciato-con-quantificatori)
+          - [*Nota bene*](#nota-bene-1)
+  - [Induzione matematica](#induzione-matematica)
+      - [Esempio](#esempio-2)
+      - [Esempio](#esempio-3)
+      - [Esempio](#esempio-4)
+      - [Esempio](#esempio-5)
+
 # Quantificatori
 
 I quantificatori sono:
@@ -33,7 +45,7 @@ $$
 \exists{n}\in{\mathbb{Z}}\,\tc{n>5}
 $$
 
-###### Nota bene
+*Nota bene*
 
 > Con il quantificatore $\exists$ intendiamo "*Esiste almeno un elemento*". Se invece vogliamo specificare che ne esiste esattamente uno diciamo "*Esiste ed è unico*" utilizzando il simbolo $\exists!$, infatti:
 
@@ -43,7 +55,7 @@ $$
 
 ### Negazioni di un enunciato con quantificatori
 
-###### Nota bene
+*Nota bene*
 
 > Una proposizione contronominale è la proposizione con ipotesi e tesi negate e scambiate rispetto all'originale.
 

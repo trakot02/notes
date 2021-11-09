@@ -4,14 +4,14 @@ title: Dimostrazioni e ricorsione
 
 - [Proprietà](#proprietà)
   - [Funzioni ricorsive e non](#funzioni-ricorsive-e-non)
-          - [Nota bene](#nota-bene)
+          - [*Nota bene*](#nota-bene)
   - [Insiemi di proposizioni](#insiemi-di-proposizioni)
     - [Principio di induzione su $PROP$](#principio-di-induzione-su-prop)
-          - [Nota bene](#nota-bene-1)
+          - [*Nota bene*](#nota-bene-1)
     - [Dimostrazione](#dimostrazione)
   - [Funzioni notevoli](#funzioni-notevoli)
     - [Insieme delle sottoproposizioni](#insieme-delle-sottoproposizioni)
-          - [Nota bene](#nota-bene-2)
+          - [*Nota bene*](#nota-bene-2)
     - [Rango di una proposizione](#rango-di-una-proposizione)
   - [Teorema di ricorsione primitiva](#teorema-di-ricorsione-primitiva)
 
@@ -39,7 +39,7 @@ Per cui si scrive:
 - $f(a)=b$ quando $(a,b)\in{f}$
 - $f:A\to{B}$ quando $f\subseteq{A\times{B}}$
 
-###### Nota bene
+*Nota bene*
 
 > Una funzione è definita in modo ricorsivo se è definita dal valore sui propri elementi.
 
@@ -79,7 +79,7 @@ Per poter determinare se una proprietà vale per tutte le proposizioni, si utili
 
 3. Ipotizzando valgano $P(\alpha), P(\beta)$, allora valgono anche $\begin{dcases}(\alpha\land\beta)&\\(\alpha\lor\beta)&\\(\alpha\limplies\beta)&\end{dcases}$
 
-###### Nota bene
+*Nota bene*
 
 > Se la proprietà $P\subseteq{PROP}$ vale ***per ogni*** elemento di $PROP$, allora significa che $P$ è $PROP$ stesso.
 
@@ -120,7 +120,7 @@ La funzione ricorsiva $Sub$ associa ad ogni proposizione, l'insieme delle propos
 
 dove $*$ è un connettivo tra $\{\land,\lor,\limplies\}$.
 
-###### Nota bene
+*Nota bene*
 
 > L'insieme $2^A$ si chiama *Insieme potenza* o *delle parti* di $A$.
 

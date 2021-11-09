@@ -4,7 +4,7 @@ title: Semantica e tautologie
 
 - [Valutazione](#valutazione)
   - [Valutazione atomica](#valutazione-atomica)
-          - [Nota bene](#nota-bene)
+          - [*Nota bene*](#nota-bene)
     - [Lemma](#lemma)
   - [Tautologia](#tautologia)
       - [Esempio](#esempio)
@@ -12,8 +12,8 @@ title: Semantica e tautologie
     - [Contromodello](#contromodello)
       - [Esempio](#esempio-1)
     - [Tavola di verità](#tavola-di-verità)
-          - [Nota bene](#nota-bene-1)
-          - [Nota bene](#nota-bene-2)
+          - [*Nota bene*](#nota-bene-1)
+          - [*Nota bene*](#nota-bene-2)
 
 # Valutazione
 
@@ -41,7 +41,7 @@ Una funzione $v$ è detta valutazione atomica se $v:AT\to\{0,1\}$ e se $v(\bot)=
 
 Data una valutazione atomica $v$, esiste ed è unica una valutazione $\valu{\cdot}_v:PROP\to\{0,1\}$ tale che $\valu{\phi}_v=v(\phi)$ per $\phi\in{AT}$.
 
-###### Nota bene
+*Nota bene*
 
 > Il valore di una proposizione è univocamente identificato dal valore dei suoi atomi.
 
@@ -131,7 +131,7 @@ $p_0$   $p_1$   $p_0\land{p_1}$   $p_0\limplies(p_0\land{p_1})$
 
 Table: tavola di verità. {#tbl: truth_table}
 
-###### Nota bene
+*Nota bene*
 
 > Le dimensioni di una tavola di verità aumentano al crescere del rango della proposizione che si sta esaminando, quindi in presenza di una proposizione troppo complessa, si dice che il problema è *intrattabile*.
 
@@ -143,6 +143,6 @@ $$ {#eq:satisfiable_def}
 
 Quindi $\alpha$ non è una tautologia, ma è vera per almeno una valutazione.
 
-###### Nota bene
+*Nota bene*
 
 > Gli unici algoritmi noti per determinare se una proposizione è soddisfacibile sono esponenziali al numero dei simboli.
