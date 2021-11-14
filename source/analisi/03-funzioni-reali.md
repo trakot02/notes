@@ -2,16 +2,7 @@
 title: Funzioni reali
 ---
 
-- [Funzioni reali a variabile reale](#funzioni-reali-a-variabile-reale)
-  - [Iniettività, suriettività e biettività](#iniettività-suriettività-e-biettività)
-      - [Esempio](#esempio)
-      - [Esempio](#esempio-1)
-      - [Esempio](#esempio-2)
-  - [Funzioni monotone](#funzioni-monotone)
-      - [Esempio](#esempio-3)
-  - [Funzioni pari e dispari](#funzioni-pari-e-dispari)
-      - [Esempio](#esempio-4)
-  - [Alcune funzioni importanti](#alcune-funzioni-importanti)
+\newpage
 
 # Funzioni reali a variabile reale
 

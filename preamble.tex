@@ -1,11 +1,9 @@
-% Inclusione dei pacchetti
+% Inclusione di pacchetti
 \usepackage{mathtools}
 \usepackage{cancel}
 \usepackage{stmaryrd}
 \usepackage{tikz}
 \usepackage{pgfplots}
-
-\usepgfplotslibrary{fillbetween}
 
 % Definizione di nuove macro
 \newcommand{\limplies}  {\rightarrow}
@@ -15,45 +13,23 @@
 \newcommand{\liff}      {\longleftrightarrow}
 \newcommand{\tc}        {\;\text{ t.c. }\;}
 
+% Stile predefinito per i grafici
 \pgfplotsset{
     functions/.style = {
-        % Griglia
+        % Impostazioni griglia di sfondo
         grid             = both,
         minor grid style = { lightgray!10 },
         major grid style = { lightgray!50 },
-        % Assi cartesiani
+        % Impostazioni degli assi cartesiani
         axis lines     = middle,
         xlabel         = { $x$ },
         ylabel         = { $y$ },
         minor tick num = 5,
-        % Funzione
+        % Impostazioni delle dimensioni
+        width = 13cm, height = 8.5cm,
         samples = 100,
         domain  = -8.5 : 8.5,
         xmin = -8.5, xmax = 8.5,
         ymin = -8.5, ymax = 8.5,
-        % Dimensioni
-        width = 13cm, height = 8.5cm
     }
 }
-
-
-% \addplot[domain = 0:5.5, blue, thick] { 1/x }
-% node[at = {(axis cs:4,0.5)}] { $f(x)=\frac{1}{x}$ };
-% \addplot[violet, thick]
-% coordinates { (1,1) (0,0) (2,1/2) };
-% \addplot[violet, thick]
-% coordinates { (1,1) (1,0) };
-% \addplot[violet, thick]
-% coordinates { (2,1/2) (2,0) };
-% \addplot[violet, mark = *]
-% coordinates { (0.8,0.1) }
-% node[pin = 240: { $A_2$ }] {};
-% \addplot[violet, mark = *]
-% coordinates { (1.3,0.1) }
-% node[pin = 300: { $A_4$ }] {};
-% \addplot[violet, mark = *]
-% coordinates { (0.8,0.4) }
-% node[pin = 120: { $A_1$ }] {};
-% \addplot[violet, mark = *]
-% coordinates { (1.3,0.4) }
-% node[pin = 70: { $A_3$ }] {};

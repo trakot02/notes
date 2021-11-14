@@ -2,20 +2,7 @@
 title: Numeri reali
 ---
 
-- [Insieme dei reali](#insieme-dei-reali)
-  - [Proprietà dei reali](#proprietà-dei-reali)
-    - [Postulato di Eudosso-Archimede](#postulato-di-eudosso-archimede)
-    - [Proprietà degli *intervalli inscatolati*](#proprietà-degli-intervalli-inscatolati)
-    - [Maggioranti e minoranti di un insieme](#maggioranti-e-minoranti-di-un-insieme)
-    - [Insiemi Limitati](#insiemi-limitati)
-      - [Esempio](#esempio)
-    - [Massimo e minimo di un insieme](#massimo-e-minimo-di-un-insieme)
-      - [Esempio](#esempio-1)
-    - [Estremo superiore ed inferiore di un insieme](#estremo-superiore-ed-inferiore-di-un-insieme)
-      - [Esempio](#esempio-2)
-  - [Teorema di completezza](#teorema-di-completezza)
-      - [Esempio](#esempio-3)
-  - [Notazione degli intervalli](#notazione-degli-intervalli)
+\newpage
 
 # Insieme dei reali
 

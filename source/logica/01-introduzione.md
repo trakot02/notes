@@ -2,18 +2,12 @@
 title: Introduzione
 ---
 
-- [Logica](#logica)
-  - [Connettivi logici](#connettivi-logici)
-    - [Connetivo *or*](#connetivo-or)
-    - [Connettivo *implies*](#connettivo-implies)
-          - [*Nota bene*](#nota-bene)
-      - [Esercizio](#esercizio)
-  - [Sintassi e semantica](#sintassi-e-semantica)
-    - [Linguaggio naturale e artificiale](#linguaggio-naturale-e-artificiale)
+\newpage
 
 # Logica
 
 La logica nasce per formalizzare certi concetti comuni del ragionamento matematico, nonché il suo linguaggio. Per questo la logica permette di determinare ciò che è vero o falso in modo totalmente **non ambiguo**.
+
 
 ## Connettivi logici
 

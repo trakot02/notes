@@ -2,15 +2,7 @@
 title: Introduzione
 ---
 
-- [Quantificatori](#quantificatori)
-      - [Esempio](#esempio)
-      - [Esempio](#esempio-1)
-    - [Negazioni di un enunciato con quantificatori](#negazioni-di-un-enunciato-con-quantificatori)
-  - [Induzione matematica](#induzione-matematica)
-      - [Esempio](#esempio-2)
-      - [Esempio](#esempio-3)
-      - [Esempio](#esempio-4)
-      - [Esempio](#esempio-5)
+\newpage
 
 # Quantificatori
 
@@ -51,7 +43,7 @@ $$
 \exists!n\in{\mathbb{Z}}\,\tc{2n=6}
 $$
 
-### Negazioni di un enunciato con quantificatori
+## Negazioni di un enunciato con quantificatori
 
 *Nota bene*
 

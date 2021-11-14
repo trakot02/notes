@@ -2,6 +2,8 @@
 title: Funzione logaritmo
 ---
 
+\newpage
+
 # Definizione
 
 Considerato un ramo di iperbole equilatera di equazione $y=\frac{1}{x}$ per $x>0$, definiamo la funzione $log:(0,+\infty)\to{\mathbb{R}}$ nel modo seguente.
