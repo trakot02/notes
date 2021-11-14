@@ -1,1 +1,4 @@
 # File da escludere
+.history
+node_modules
+.vscode
