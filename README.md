@@ -51,7 +51,7 @@ sudo apt install -f ./pandoc-[version]-[arch].deb
 Vengono utilizzate anche delle estensioni di Pandoc, per poterle utilizzare eseguire il seguente comando:
 
 ```sh
-sudo pip install pandoc-eqnos pandoc-fignos pandoc-tablenos
+sudo pip install pandoc-eqnos pandoc-fignos pandoc-tablenos pandoc-secnos
 ```
 
 ### Conversione
@@ -74,7 +74,13 @@ make source/{nome-corso}/{numero}-{argomento}.pdf
 Per una conversione generale è sufficiente eseguire:
 
 ```sh
-make
+make all
+```
+
+Per eliminare tutti i file PDF eseguire:
+
+```sh
+make clean
 ```
 
 [1]: https://www.markdownguide.org/
