@@ -2,18 +2,7 @@
 title: Dimostrazioni e ricorsione
 ---
 
-- [Proprietà](#proprietà)
-  - [Funzioni ricorsive e non](#funzioni-ricorsive-e-non)
-          - [*Nota bene*](#nota-bene)
-  - [Insiemi di proposizioni](#insiemi-di-proposizioni)
-    - [Principio di induzione su $PROP$](#principio-di-induzione-su-prop)
-          - [*Nota bene*](#nota-bene-1)
-    - [Dimostrazione](#dimostrazione)
-  - [Funzioni notevoli](#funzioni-notevoli)
-    - [Insieme delle sottoproposizioni](#insieme-delle-sottoproposizioni)
-          - [*Nota bene*](#nota-bene-2)
-    - [Rango di una proposizione](#rango-di-una-proposizione)
-  - [Teorema di ricorsione primitiva](#teorema-di-ricorsione-primitiva)
+\newpage
 
 # Proprietà
 

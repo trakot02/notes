@@ -1,12 +1,35 @@
-% Inclusione dei pacchetti
+% Inclusione di pacchetti
 \usepackage{mathtools}
 \usepackage{cancel}
 \usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{pgfplots}
 
 % Definizione di nuove macro
-\newcommand{\limplies}{\rightarrow}
-\newcommand{\valu}[1]{\llbracket\;{#1}\;\rrbracket}
-\newcommand{\taut}{\;\vDash\;}
-\newcommand{\repl}[2]{[\,{#1}\,/\,{#2}\,]}
-\newcommand{\liff}{\longleftrightarrow}
-\newcommand{\tc}{\,\text{ t.c. }\,}
+\newcommand{\limplies}  {\rightarrow}
+\newcommand{\valu}[1]   {\llbracket\;{#1}\;\rrbracket}
+\newcommand{\taut}      {\;\vDash\;}
+\newcommand{\repl}[2]   {[\;{#1}\,/\,{#2}\;]}
+\newcommand{\liff}      {\longleftrightarrow}
+\newcommand{\tc}        {\;\text{ t.c. }\;}
+
+% Stile predefinito per i grafici
+\pgfplotsset{
+    functions/.style = {
+        % Impostazioni griglia di sfondo
+        grid             = both,
+        minor grid style = { lightgray!10 },
+        major grid style = { lightgray!50 },
+        % Impostazioni degli assi cartesiani
+        axis lines     = middle,
+        xlabel         = { $x$ },
+        ylabel         = { $y$ },
+        minor tick num = 5,
+        % Impostazioni delle dimensioni
+        width = 13cm, height = 8.5cm,
+        samples = 100,
+        domain  = -8.5 : 8.5,
+        xmin = -8.5, xmax = 8.5,
+        ymin = -8.5, ymax = 8.5,
+    }
+}

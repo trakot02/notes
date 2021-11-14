@@ -2,20 +2,7 @@
 title: Numeri reali
 ---
 
-- [Insieme dei reali](#insieme-dei-reali)
-  - [Proprietà dei reali](#proprietà-dei-reali)
-    - [Postulato di Eudosso-Archimede](#postulato-di-eudosso-archimede)
-    - [Proprietà degli *intervalli inscatolati*](#proprietà-degli-intervalli-inscatolati)
-    - [Maggioranti e minoranti di un insieme](#maggioranti-e-minoranti-di-un-insieme)
-    - [Insiemi Limitati](#insiemi-limitati)
-      - [Esempio](#esempio)
-    - [Massimo e minimo di un insieme](#massimo-e-minimo-di-un-insieme)
-      - [Esempio](#esempio-1)
-    - [Estremo superiore ed inferiore di un insieme](#estremo-superiore-ed-inferiore-di-un-insieme)
-      - [Esempio](#esempio-2)
-  - [Teorema di completezza](#teorema-di-completezza)
-      - [Esempio](#esempio-3)
-  - [Notazione degli intervalli](#notazione-degli-intervalli)
+\newpage
 
 # Insieme dei reali
 
@@ -45,8 +32,8 @@ Date due successioni di reali:
 
 $$
 \begin{aligned}
-  &a_0<a_1<a_2<a_3<\dots\\
-  &b_0>b_1>b_2>b_3>\dots
+    &a_0<a_1<a_2<a_3<\dots\\
+    &b_0>b_1>b_2>b_3>\dots
 \end{aligned}
 $$
 
@@ -54,11 +41,11 @@ Tali per cui ${a_j<b_j}$ per ogni indice $j$ esiste un numero reale $c$ per cui 
 
 $$
 \begin{matrix}
-  a_0=1\;&\;b_0=1\\
-  a_1=1,4\;&\;b_1=1,5\\
-  a_2=1,41\;&\;b_2=1,42\\
-  a_3=1,414\;&\;b_3=1,415\\
-  \dots\;&\;\dots
+    a_0=1\;&\;b_0=1\\
+    a_1=1,4\;&\;b_1=1,5\\
+    a_2=1,41\;&\;b_2=1,42\\
+    a_3=1,414\;&\;b_3=1,415\\
+    \dots\;&\;\dots
 \end{matrix}
 $$
 

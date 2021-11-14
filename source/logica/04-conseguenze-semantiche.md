@@ -2,21 +2,7 @@
 title: Conseguenze semantiche
 ---
 
-- [Ragionamento ipotetico deduttivo](#ragionamento-ipotetico-deduttivo)
-  - [Conseguenze semantiche](#conseguenze-semantiche)
-          - [*Notazione*](#notazione)
-      - [Esempio](#esempio)
-      - [Esercizio](#esercizio)
-    - [Tautologie notevoli](#tautologie-notevoli)
-  - [Stringhe ed occorrenze](#stringhe-ed-occorrenze)
-  - [Sostituzione](#sostituzione)
-    - [Definizione iterativa](#definizione-iterativa)
-      - [Esempio](#esempio-1)
-    - [Definizione ricorsiva](#definizione-ricorsiva)
-    - [Lemma](#lemma)
-  - [Relazioni di equivalenza](#relazioni-di-equivalenza)
-          - [*Nota bene*](#nota-bene)
-    - [Lemma](#lemma-1)
+\newpage
 
 # Ragionamento ipotetico deduttivo
 

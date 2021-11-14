@@ -2,17 +2,7 @@
 title: Introduzione
 ---
 
-- [Quantificatori](#quantificatori)
-      - [Esempio](#esempio)
-      - [Esempio](#esempio-1)
-          - [*Nota bene*](#nota-bene)
-    - [Negazioni di un enunciato con quantificatori](#negazioni-di-un-enunciato-con-quantificatori)
-          - [*Nota bene*](#nota-bene-1)
-  - [Induzione matematica](#induzione-matematica)
-      - [Esempio](#esempio-2)
-      - [Esempio](#esempio-3)
-      - [Esempio](#esempio-4)
-      - [Esempio](#esempio-5)
+\newpage
 
 # Quantificatori
 
@@ -53,7 +43,7 @@ $$
 \exists!n\in{\mathbb{Z}}\,\tc{2n=6}
 $$
 
-### Negazioni di un enunciato con quantificatori
+## Negazioni di un enunciato con quantificatori
 
 *Nota bene*
 
@@ -83,11 +73,11 @@ Vogliamo calcolare la somma dei numeri interi positivi minori o uguali a cento.
 
 $$
 \begin{aligned}
-  S&=1+2+\dots+99+100\\
-  S&=100+99+\dots+2+1\\
-  \hline
-  2S&=101+101+\dots+101+101\\
-  &=101\cdot{100}
+    S&=1+2+\dots+99+100\\
+    S&=100+99+\dots+2+1\\
+    \hline
+    2S&=101+101+\dots+101+101\\
+    &=101\cdot{100}
 \end{aligned}
 $$ {#eq:gauss_sum}
 
@@ -106,22 +96,20 @@ $$
 Dimostriamo la congettura @eq:gauss_sum per **induzione**:
 
 - Passo base: l'espressione @eq:gauss_sum è soddisfatta quando $n=0$ perché
-
 $$
 \sum_{k=0}^{0}k=\frac{0\cdot{1}}{2}
 $$
 
 - Passo induttivo: se $n\in{\mathbb{N}}$ soddisfa l'espressione @eq:gauss_sum altrettanto vale anche per $n+1$
-
 $$
 \begin{aligned}
-  \sum_{k=0}^{n+1}k
-  &=0+1+\cdots+n+(n+1)\\
-  &=\sum_{k=0}^{n}k+n+1\\
-  &=\frac{n(n+1)}{2}+n+1\\
-  &=(n+1)(\frac{n}{2}+1)\\
-  &=\frac{(n+1)(n+2)}{2}
-  &\square
+    \sum_{k=0}^{n+1}k
+    &=0+1+\cdots+n+(n+1)\\
+    &=\sum_{k=0}^{n}k+n+1\\
+    &=\frac{n(n+1)}{2}+n+1\\
+    &=(n+1)(\frac{n}{2}+1)\\
+    &=\frac{(n+1)(n+2)}{2}
+    &\square
 \end{aligned}
 $$
 
@@ -142,13 +130,13 @@ $$
 - Passo induttivo: se $n\in{\mathbb{N}}$ soddisfa la formula, allora
 $$
 \begin{aligned}
-  \sum_{k=1}^{n+1}k^2
-  &=\sum_{k=1}^{n}k^2+(n+1)^2\\
-  &=\frac{n(n+1)(2n+1)}{6}+(n+1)^2\\
-  &=(n+1)(\frac{n(2n+1)}{6}+n+1)\\
-  &=(n+1)\cdot\frac{2n^2+7n+6}{6}\\
-  &=\frac{(n+1)(n+2)(2n+3)}{6}
-  &\square
+    \sum_{k=1}^{n+1}k^2
+    &=\sum_{k=1}^{n}k^2+(n+1)^2\\
+    &=\frac{n(n+1)(2n+1)}{6}+(n+1)^2\\
+    &=(n+1)(\frac{n(2n+1)}{6}+n+1)\\
+    &=(n+1)\cdot\frac{2n^2+7n+6}{6}\\
+    &=\frac{(n+1)(n+2)(2n+3)}{6}
+    &\square
 \end{aligned}
 $$
 
@@ -182,10 +170,10 @@ $$
 - Passo induttivo: se $k\in{\mathbb{N}}$ soddisfa la diseguaglianza, allora
 $$
 \begin{aligned}
-  (1+x)^{k+1}
-  &=(1+x)^k(1+x)\geq(1+kx)(1+x)\\
-  &=1+(k+1)x+kx^2\geq{1+(k+1)x}
-  &\square
+    (1+x)^{k+1}
+    &=(1+x)^k(1+x)\geq(1+kx)(1+x)\\
+    &=1+(k+1)x+kx^2\geq{1+(k+1)x}
+    &\square
 \end{aligned}
 $$
 

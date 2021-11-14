@@ -2,18 +2,7 @@
 title: Semantica e tautologie
 ---
 
-- [Valutazione](#valutazione)
-  - [Valutazione atomica](#valutazione-atomica)
-          - [*Nota bene*](#nota-bene)
-    - [Lemma](#lemma)
-  - [Tautologia](#tautologia)
-      - [Esempio](#esempio)
-      - [Esercizio](#esercizio)
-    - [Contromodello](#contromodello)
-      - [Esempio](#esempio-1)
-    - [Tavola di verità](#tavola-di-verità)
-          - [*Nota bene*](#nota-bene-1)
-          - [*Nota bene*](#nota-bene-2)
+\newpage
 
 # Valutazione
 
