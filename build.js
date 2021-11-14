@@ -61,14 +61,14 @@ function listenForChange(dirs)
 	}
 }
 
-const dirListener = function () {
+const dirListener = function() {
 	let timeoutId = 0;
 	/**
 	* 
 	* @param {String} filename 
 	* @param {String} dir 
 	*/
-	return function dirListener (filename, dir)
+	return function(filename, dir)
 	{
 		if (!filename.includes('md')) {
 			return;
