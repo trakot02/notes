@@ -50,6 +50,7 @@ const outputMap = new Map(paths.map((element) => {
 }));
 console.log(outputMap);
 
+// start the watch
 listenForChange(paths);
 
 function listenForChange(dirs)
