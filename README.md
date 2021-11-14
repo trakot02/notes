@@ -21,7 +21,7 @@ Per segnalare eventuali errori o miglioramenti utilizzare la [*sezione problemi*
 
 ## Contributi
 
-Per contribuire è consigliato un ambiente **Ubuntu-based**, come editor **VS Code** con installato l'estensione chiamata "*Markdown All in One*".
+Per contribuire è consigliato un ambiente **Ubuntu-based**, come editor **VS Code** con installato l'estensione chiamata "*Markdown All in One*" e "*Latex Workshop*".
 
 ### Dipendenze
 
@@ -81,6 +81,19 @@ Per eliminare tutti i file PDF eseguire:
 
 ```sh
 make clean
+```
+
+### Docker
+Nell'immagine del progetto si trova tutto il necessario per scrivere e fare la build con pandoc.
+```sh
+docker build -t notes-dev .
+
+# hot reloading
+docker run -d -v ${PWD}:/data notes-dev node build.js
+
+# build file
+docker run -d -v ${PWD}:/data notes-dev make {pathToFile}.pdf
+
 ```
 
 [1]: https://www.markdownguide.org/
