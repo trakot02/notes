@@ -7,7 +7,6 @@ title: Semantica e tautologie
 # Valutazione
 
 Una proposizione può assumere solamente due valori: vero o falso, l'azione di determinare il valore di una proposizione viene chiamata *valutazione*. Una valutazione è del tipo:
-
 $$
 \mathcal{V}:PROP\to\{0,1\}
 $$
@@ -22,7 +21,7 @@ e **deve** assumere come valori:
 
 4. $\mathcal{V}(\phi)=1\iff\mathcal{V}(\lnot\phi)=0$
 
-5. $\mathcal{V}(\phi\limplies\psi)=1\iff\mathcal{V}(\phi)=0\text{ or }\mathcal{V}(\psi)=1$
+5. $\mathcal{V}(\phi\limp\psi)=1\iff\mathcal{V}(\phi)=0\text{ or }\mathcal{V}(\psi)=1$
 
 ## Valutazione atomica
 
@@ -35,30 +34,27 @@ Data una valutazione atomica $v$, esiste ed è unica una valutazione $\valu{\cdo
 > Il valore di una proposizione è univocamente identificato dal valore dei suoi atomi.
 
 Infatti:
-
 $$
-\valu{\alpha\lor\beta}_v=1\iff\valu{\alpha}_v=1\text{ or }\valu{\beta}t_v=1
+\valu{\alpha\lor\beta}_v=1\iff{\valu{\alpha}_v=1\text{ or }\valu{\beta}_v=1}
 $$
 
 ### Lemma
 
-Sia $\phi$ una proposizione e sia $\phi^{at}=\{p\,|\,p\in{AT},\,p\in{Sub(\phi)}\}$, siano $v_1$ e $v_2$ due valutazioni atomiche tali che $\forall{p}\in\phi^{at}v_1(p)=v_2(p)$, allora possiamo affermare che: $\valu{\phi}_{v_1}=\valu{\phi}_{v_2}$.
+Sia $\phi$ una proposizione e sia $\phi^{at}=\{p\;|\;p\in{AT},\;p\in{Sub(\phi)}\}$, siano $v_1$ e $v_2$ due valutazioni atomiche tali che $\forall{p}\in\phi^{at}v_1(p)=v_2(p)$, allora possiamo affermare che: $\valu{\phi}_{v_1}=\valu{\phi}_{v_2}$.
 
 ## Tautologia
 
 La proposizione $\alpha$ viene chiamata *tautologia* se e solamente se $\forall{v}\valu{\alpha}_v = 1$, per cui scriviamo:
-
 $$
 \taut{\alpha}\iff\forall{v}\valu{\alpha}_v=1
-$$ {#eq:tautology_def}
+$$ {#eq:tautologia}
 
 #### Esempio
 
-Vogliamo dimostrare che $\taut{\alpha\limplies\alpha}$, e cioè che $\forall{v}\valu{\alpha\limplies\alpha}_v=1$, quindi:
-
+Vogliamo dimostrare che $\taut{\alpha\limp\alpha}$, e cioè che $\forall{v}\valu{\alpha\limp\alpha}_v=1$, quindi:
 $$
 \begin{aligned}
-  \forall{v}\valu{\alpha\limplies\alpha}_v=1
+  \forall{v}\valu{\alpha\limp\alpha}_v=1
   &\iff\valu{\alpha}_v=0\text{ or }\valu{\alpha}=1\\
   &\implies{T}
   &\square
@@ -67,12 +63,11 @@ $$
 
 #### Esercizio
 
-Vogliamo dimostrare che $\taut{\alpha\limplies(\beta\limplies\alpha)}$, quindi:
-
+Vogliamo dimostrare che $\taut{\alpha\limp(\beta\limp\alpha)}$, quindi:
 $$
 \begin{aligned}
-  \forall{v}\valu{\alpha\limplies(\beta\limplies\alpha)}_v=1
-  &\iff\valu{\alpha}_v=0\text{ or }\valu{\beta\limplies\alpha}=1\\
+  \forall{v}\valu{\alpha\limp(\beta\limp\alpha)}_v=1
+  &\iff\valu{\alpha}_v=0\text{ or }\valu{\beta\limp\alpha}=1\\
   &\iff\underline{\valu{\alpha}_v=0}\text{ or }\valu{\beta}_v=0\text{ or }\underline{\valu{\alpha}_v=1}\\
   &\implies{T}
   &\square
@@ -82,21 +77,18 @@ $$
 ### Contromodello
 
 Per dimostrare che una proposizione **non** è una tautologia occorre ricercare un'istanza di $\phi$ e una valutazione tali per cui:
-
 $$
 \exists{v},\valu{\phi}_v=0
 $$
 
 #### Esempio
 
-Data la proposizione $p_0\limplies(p_0\land{p_1})$, devono esistere delle istanze di $p_0,p_1$ e una valutazione $v$ tale per cui $\valu{p_0\limplies(p_0\land{p_1})}_v=0$.
+Data la proposizione $p_0\limp(p_0\land{p_1})$, devono esistere delle istanze di $p_0,p_1$ e una valutazione $v$ tale per cui $\valu{p_0\limp(p_0\land{p_1})}_v=0$.
 
-Ipotizzando $\valu{p_0}_v=1,\valu{p_1}_v=0$ si
-ottiene:
-
+Ipotizzando $\valu{p_0}_v=1,\valu{p_1}_v=0$ si ottiene:
 $$
 \begin{aligned}
-  \valu{p_0\limplies(p_0\land{p_1})}_v=0
+  \valu{p_0\limp(p_0\land{p_1})}_v=0
   &\iff\valu{p_0}_v=1\text{ and }\valu{p_0\land{p_1}}_v=0\\
   &\iff\valu{p_0}_v=1\text{ and }(\cancel{\valu{p_0}_v=0}\text{ or }\valu{p_1}_v=0)\\
   &\iff\valu{p_0}_v=1\text{ and }\valu{p_1}_v=0)\\
@@ -111,24 +103,24 @@ In altre parole, esiste una valutazione $v$ che grazie al valore che assume sugl
 
 Un altro modo per esprimere questo concetto è la tavola di verità:
 
-$p_0$   $p_1$   $p_0\land{p_1}$   $p_0\limplies(p_0\land{p_1})$
-------- ------- ----------------- ---------------------------------
-0       0       0                 1
-0       1       0                 1
-**1**   **0**   **0**             **0**
-1       1       1                 1
+| **$p_0$** | **$p_1$** | **$p_0\land{p_1}$** | **$p_0\limp{p_0\land{p_1}}$** |
+|:---------:|:---------:|:-------------------:|:-----------------------------:|
+| 0         | 0         | 0                   | 1                             |
+| 0         | 1         | 0                   | 1                             |
+| 1         | 0         | 0                   | 0                             |
+| 1         | 1         | 1                   | 1                             |
 
-Table: tavola di verità. {#tbl: truth_table}
+
+Table: tavola di verità. {#tbl:tavola_di_verità}
 
 *Nota bene*
 
 > Le dimensioni di una tavola di verità aumentano al crescere del rango della proposizione che si sta esaminando, quindi in presenza di una proposizione troppo complessa, si dice che il problema è *intrattabile*.
 
 La proposizione $\alpha$ è detta soddisfacibile quando:
-
 $$
 \exists{v}\valu{\alpha}_v=1
-$$ {#eq:satisfiable_def}
+$$ {#eq:soddisfacibilità}
 
 Quindi $\alpha$ non è una tautologia, ma è vera per almeno una valutazione.
 

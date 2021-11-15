@@ -6,10 +6,10 @@
 \usepackage{pgfplots}
 
 % Definizione di nuove macro
-\newcommand{\limplies}  {\rightarrow}
+\newcommand{\limp}      {\rightarrow}
 \newcommand{\valu}[1]   {\llbracket\;{#1}\;\rrbracket}
 \newcommand{\taut}      {\;\vDash\;}
-\newcommand{\repl}[2]   {[\;{#1}\,/\,{#2}\;]}
+\newcommand{\repl}[2]   {[\;{#1}\;/\;{#2}\;]}
 \newcommand{\liff}      {\longleftrightarrow}
 \newcommand{\tc}        {\;\text{ t.c. }\;}
 
@@ -26,7 +26,7 @@
         ylabel         = { $y$ },
         minor tick num = 5,
         % Impostazioni delle dimensioni
-        width = 13cm, height = 8.5cm,
+        width = 14cm, height = 8cm,
         samples = 100,
         domain  = -8.5 : 8.5,
         xmin = -8.5, xmax = 8.5,
