@@ -151,16 +151,16 @@ Di conseguenza, è corretto scrivere $\theo{\alpha\limp(\beta\limp(\alpha\land\b
 
 ### Correttezza debole
 
-Quando $\alpha$ è dimostrato essere un teorema, allora siamo certi che sempre $\alpha$ è anche una tautologia. Per cui:
+Quando $\phi$ è dimostrato essere un teorema, allora siamo certi che sempre $\phi$ è anche una tautologia. Per cui:
 $$
-\theo{\alpha}\implies\taut{\alpha}
+\theo{\phi}\implies\taut{\phi}
 $$
 
 ### Completezza debole
 
-Quando $\alpha$ è dimostrato essere una tautologia, allora siamo certi che sempre $\alpha$ è anche un teorema. Per cui:
+Quando $\phi$ è dimostrato essere una tautologia, allora siamo certi che sempre $\phi$ è anche un teorema. Per cui:
 $$
-\taut{\alpha}\implies\theo{\alpha}
+\taut{\phi}\implies\theo{\phi}
 $$
 
 ## Occorrenze
@@ -222,5 +222,5 @@ $$
         \infer2[$(\land{\;I})$]{\beta\land\alpha}
         \infer1[$(\limp{I})^1$]{(\alpha\land\beta)\limp(\beta\land\alpha)}
     \end{prooftree}
-\right.\quad\square
+\right.\qquad\square
 $$

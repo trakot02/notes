@@ -34,10 +34,11 @@ La funzione $f(x)=x^3-x$ interseca tutte le rette orizzontali almeno una volta, 
 $$
 \begin{tikzpicture}
     \begin{axis}[functions, title = {Funzione suriettiva}]
+        % Funzione y = x^3-x
         \addplot[blue, thick, domain = -3:3]{pow(x,3)-x}
             node[at = {(axis cs: 4.5,7)}]{$f(x)=x^3-x$};
-        \addplot[red, thick]{0}
-            node[at = {(axis cs: 7,1)}]{$y=0$};
+        % Funzione y = 0
+        \addplot[red, thick]{0} node[at = {(axis cs: 7,1)}]{$y=0$};
     \end{axis}
 \end{tikzpicture}
 $$
@@ -48,10 +49,11 @@ La funzione $f(x)=e^x$ interseca alcune rette orizzontali una sola volta ma non 
 $$
 \begin{tikzpicture}
     \begin{axis}[functions, title = {Funzione iniettiva}]
+        % Funzione y = e^x
         \addplot[blue, thick, domain = -8.5:2.5]{pow(e,x)}
             node[at = {(axis cs: 4,7)}]{$f(x)=e^x$};
-        \addplot[red, thick]{-2}
-            node[at = {(axis cs: 7,-3)}]{$y=-2$};
+        % Funzione y = -2
+        \addplot[red, thick]{-2} node[at = {(axis cs: 7,-3)}]{$y=-2$};
     \end{axis}
 \end{tikzpicture}
 $$
@@ -62,6 +64,7 @@ La funzione $f(x)=x^3+3x$ interseca tutte le rette orizzontali esattamente una s
 $$
 \begin{tikzpicture}
     \begin{axis}[functions, title = {Funzione biettiva}]
+        % Funzione y = x^3+3x
         \addplot[blue, thick, domain = -2:2]{pow(x,3)+3*x}
             node[at = {(axis cs: 4,7)}]{$f(x)=x^3+3x$};
     \end{axis}
@@ -89,16 +92,21 @@ Per ogni $x_1\in{A},x_2\in{A}$ con $x_1<x_2$.
 
 #### Esempio
 
-Le funzioni $f(x)=e^x$, $g(x)=x^3$ ed $h(x)=-log_2(x)$ sono rispettivamente: strettamente crescente, non decrescente e strettamente decrescente.
+Le funzioni $f_1(x)=e^x+2$, $f_2(x)=x^3-1$ ed $f_3(x)=-2x$ sono rispettivamente: strettamente crescente, non decrescente e strettamente decrescente.
 $$
 \begin{tikzpicture}
-    \begin{axis}[functions, title = {Funzioni monotone}]
-        \addplot[blue, thick, domain = -8.5:3]{pow(e,x)}
-            node[at = {(axis cs: -4,1)}]{$f(x)=e^x$};
-        \addplot[domain = -3:3, orange, thick] { pow(x,3) }
-            node[at = {(axis cs:3,4)}] { $g(x)=x^3$ };
-        \addplot[domain = 0:8.5, violet, thick] { -log2(x) }
-            node[at = {(axis cs:3,-3)}] { $h(x)=-log_2(x)$ };
+    \begin{axis}[functions, title = {Funzioni monotone},
+                xmin = -5.5, xmax = 5.5,
+                ymin = -3.5, ymax = 8.5]
+        % Funzione e^x
+        \addplot[blue, thick, domain = -8.5:2.5]{pow(e,x)+1}
+            node[at = {(axis cs: -4,2)}]{$f_1(x)=e^x+1$};
+        % Funzione x^3
+        \addplot[teal, thick, domain = -2.5:2.5]{pow(x,3)-1}
+            node[at = {(axis cs: 3,4)}]{$f_2(x)=x^3-1$};
+        % Funzione -2x
+        \addplot[cyan, thick, domain = -5:3]{-2*x}
+            node[at = {(axis cs: 2.2,-2)}]{$f_3(x)=-2x$};
     \end{axis}
 \end{tikzpicture}
 $$
@@ -132,11 +140,15 @@ Quando $f$ è un **polinomio**, possiamo affermare che è pari quando **l'espone
 Le funzioni $f,g:\mathbb{R}\to{\mathbb{R}}$, definite come $f(x)\coloneqq{x^2},\;g(x)\coloneqq{(x^3}\;\;\forall{x}\in{\mathbb{R}}$ sono rispettivamente: pari e dispari.
 $$
 \begin{tikzpicture}
-    \begin{axis}[functions, title = {Funzioni pari e dispari}]
+    \begin{axis}[functions, title = {Funzioni pari e dispari},
+                xmin = -5.5, xmax = 5.5,
+                ymin = -5.5, ymax = 5.5]
+        % Funzione y = x^2
         \addplot[blue, thick, domain = -3:3]{pow(x,2)}
-            node[at = {(axis cs: 2,2)}]{$f(x)=x^2$};
-        \addplot[orange, thick, domain = -3:3]{pow(x,3)}
-            node[at = {(axis cs: -2,-2)}]{$g(x)=x^3$};
+            node[at = {(axis cs: 3,4)}]{$f(x)=x^2$};
+        % Funzione y = x^3+3x
+        \addplot[teal, thick, domain = -3:3]{pow(x,3)+3*x}
+            node[at = {(axis cs: -2,-2)}]{$g(x)=x^3+3x$};
     \end{axis}
 \end{tikzpicture}
 $$
