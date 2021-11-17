@@ -40,7 +40,7 @@ $$
 
 ### Lemma
 
-Sia $\phi$ una proposizione e sia $\phi^{at}=\{p\;|\;p\in{AT},\;p\in{Sub(\phi)}\}$, siano $v_1$ e $v_2$ due valutazioni atomiche tali che $\forall{p}\in\phi^{at}v_1(p)=v_2(p)$, allora possiamo affermare che: $\valu{\phi}_{v_1}=\valu{\phi}_{v_2}$.
+Sia $\phi$ una proposizione e sia $\phi^{at}=\{p\mid{p}\in{AT},\;p\in{\sub(\phi)}\}$, siano $v_1$ e $v_2$ due valutazioni atomiche tali che $\forall{p}\in\phi^{at}v_1(p)=v_2(p)$, allora possiamo affermare che: $\valu{\phi}_{v_1}=\valu{\phi}_{v_2}$.
 
 ## Tautologia
 
@@ -56,7 +56,7 @@ $$
 \begin{aligned}
   \forall{v}\valu{\alpha\limp\alpha}_v=1
   &\iff\valu{\alpha}_v=0\text{ or }\valu{\alpha}=1\\
-  &\implies{T}
+  &\implies{Vero}
   &\square
 \end{aligned}
 $$
@@ -69,7 +69,7 @@ $$
   \forall{v}\valu{\alpha\limp(\beta\limp\alpha)}_v=1
   &\iff\valu{\alpha}_v=0\text{ or }\valu{\beta\limp\alpha}=1\\
   &\iff\underline{\valu{\alpha}_v=0}\text{ or }\valu{\beta}_v=0\text{ or }\underline{\valu{\alpha}_v=1}\\
-  &\implies{T}
+  &\implies{Vero}
   &\square
 \end{aligned}
 $$
@@ -92,7 +92,7 @@ $$
   &\iff\valu{p_0}_v=1\text{ and }\valu{p_0\land{p_1}}_v=0\\
   &\iff\valu{p_0}_v=1\text{ and }(\cancel{\valu{p_0}_v=0}\text{ or }\valu{p_1}_v=0)\\
   &\iff\valu{p_0}_v=1\text{ and }\valu{p_1}_v=0)\\
-  &\implies{T}
+  &\implies{Vero}
   &\square
 \end{aligned}
 $$
@@ -110,12 +110,13 @@ Un altro modo per esprimere questo concetto è la tavola di verità:
 | 1         | 0         | 0                   | 0                             |
 | 1         | 1         | 1                   | 1                             |
 
-
 Table: tavola di verità. {#tbl:tavola_di_verità}
 
 *Nota bene*
 
 > Le dimensioni di una tavola di verità aumentano al crescere del rango della proposizione che si sta esaminando, quindi in presenza di una proposizione troppo complessa, si dice che il problema è *intrattabile*.
+
+## Soddisfacibilità
 
 La proposizione $\alpha$ è detta soddisfacibile quando:
 $$

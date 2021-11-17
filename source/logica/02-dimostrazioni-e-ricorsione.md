@@ -8,7 +8,7 @@ title: Dimostrazioni e ricorsione
 
 Sia $A$ un insieme e $P$ un suo sottoinsieme: l'elemento $a\in{A}$ soddisfa la proprietà $P$ se e solamente se $a\in{P}$. In altre parole una proprietà è l'insieme degli elementi che rispettano una determinata condizione.
 
-Per esempio, una proprietà su $\mathbb{N}$ potrebbe essere: $P = \{n\;|\;n \in{\mathbb{N}},n>0\}$ dove $P\subseteq{\mathbb{N}}$, infatti:
+Per esempio, una proprietà su $\mathbb{N}$ potrebbe essere: $P = \{n\mid{n} \in{\mathbb{N}},n>0\}$ dove $P\subseteq{\mathbb{N}}$, infatti:
 
 - $1\in{P}$ infatti ${P(1)}$ vale
 - $0\notin{P}$ perciò ${P(0)}$ non vale.
@@ -68,7 +68,7 @@ Per poter determinare se una proprietà vale per tutte le proposizioni, si utili
 
 *Nota bene*
 
-> Se la proprietà $P\subseteq{PROP}$ vale ***per ogni*** elemento di $PROP$, allora significa che $P$ è $PROP$ stesso.
+> Se la proprietà $P\subseteq{PROP}$ vale **per ogni** elemento di $PROP$, allora significa che $P$ è $PROP$ stesso.
 
 ### Dimostrazione
 
@@ -99,13 +99,13 @@ Alcune funzioni sono indispensabili per poter definire determinati concetti.
 
 ### Insieme delle sottoproposizioni
 
-La funzione ricorsiva $Sub$ associa ad ogni proposizione, l'insieme delle proposizioni che la compongono, cioè $Sub:PROP\to{2^{PROP}}$. I valori che assume $Sub$ sono:
+La funzione ricorsiva $\sub$ associa ad ogni proposizione, l'insieme delle proposizioni che la compongono, cioè $\sub:PROP\to{2^{PROP}}$. I valori che assume $\sub$ sono:
 
-- $Sub(\phi)=\{\phi\}$ per $\phi\in{AT}$
+- $\sub(\phi)=\{\phi\}$ per $\phi\in{AT}$
 
-- $Sub(\lnot\phi)=\{(\lnot\phi)\}\;\cup\;{Sub(\phi)}$
+- $\sub(\lnot\phi)=\{(\lnot\phi)\}\;\cup\;{\sub(\phi)}$
 
-- $\begin{drcases}Sub(\alpha\land\beta)\\Sub(\alpha\lor\beta)\\Sub(\alpha\limp\beta)\end{drcases}=\{\phi*\psi\}\;\cup\;Sub(\phi)\;\cup\;Sub(\psi)$
+- $\begin{drcases}\sub(\alpha\land\beta)\\\sub(\alpha\lor\beta)\\\sub(\alpha\limp\beta)\end{drcases}=\{\phi*\psi\}\;\cup\;\sub(\phi)\;\cup\;\sub(\psi)$
 
 dove $*$ è un connettivo tra $\{\land,\lor,\limp\}$.
 
@@ -115,13 +115,13 @@ dove $*$ è un connettivo tra $\{\land,\lor,\limp\}$.
 
 ### Rango di una proposizione
 
-La funzione ricorsiva $r$ associa ad ogni proposizione il proprio rango o complessità, cioè $r:PROP\to{\mathbb{N}}$. I valori che assume sono:
+La funzione ricorsiva $\rank$ associa ad ogni proposizione il proprio rango o complessità, cioè $\rank:PROP\to{\mathbb{N}}$. I valori che assume sono:
 
-- $r(\phi)=0$ per $\phi\in{AT}$
+- $\rank(\phi)=0$ per $\phi\in{AT}$
 
-- $r(\lnot\phi)=1+r(\phi)$
+- $\rank(\lnot\phi)=1+\rank(\phi)$
 
-- $\begin{drcases}r(\alpha\land\beta)\\r(\alpha\lor\beta)\\r(\alpha\limp\beta)\end{drcases}=1+\text{max}(\;r(\phi),r(\psi)\;)$
+- $\begin{drcases}\rank(\alpha\land\beta)\\\rank(\alpha\lor\beta)\\\rank(\alpha\limp\beta)\end{drcases}=1+\max(\;\rank(\phi),\rank(\psi)\;)$
 
 ## Teorema di ricorsione primitiva
 

@@ -141,7 +141,7 @@ $$
 \end{tikzpicture}
 $$
 
-## Alcune funzioni importanti
+### Alcune funzioni importanti
 
 - Funzioni polinomiali: sono quelle funzioni $\mathbb{R}\to{\mathbb{R}}$ della forma:
 $$

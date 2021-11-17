@@ -23,7 +23,6 @@ $$
 $$
 
 L'espressione $\Gamma\taut{\psi}$ si dice conseguenza semantica se e solamente se $\psi$ è verificata da ogni valutazione $v$ che verificha anche $\Gamma$, per cui scriviamo:
-
 $$
 \forall{v}\valu{\Gamma}_v=1\implies\valu{\psi}_v=1
 $$ {#eq:conseguenza_semantica}
@@ -33,7 +32,6 @@ $$ {#eq:conseguenza_semantica}
 Vogliamo provare che se $\alpha$ ed $\alpha\limp\beta$ sono vere, allora lo è anche $\beta$, cioè che $\alpha\limp\beta,\alpha\taut{\beta}$.
 
 Svolgimento:
-
 $$
 \begin{aligned}
   \valu{\alpha\limp\beta,\alpha}_v=1
@@ -47,10 +45,9 @@ $$
 
 #### Esercizio
 
-Vogliamo dimostrare che $(\Gamma,\alpha\taut{\beta})\implies\Gamma\taut{\alpha\limp\beta}$.
+Vogliamo dimostrare che $(\Gamma,\alpha\taut{\beta})\implies(\Gamma\taut{\alpha\limp\beta})$.
 
 Svolgimento:
-
 $$
 \begin{aligned}
   \forall{v}\valu{\Gamma,\alpha}_v=1\implies\valu{\beta}_v=1

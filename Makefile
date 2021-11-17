@@ -1,24 +1,22 @@
-# Filtri utilizzati per estendere Pandoc
-FILTERS = -F pandoc-xnos
+# Configurazione di LaTeX e Pandoc
+Headers = header.yaml -H preamble.tex
+# Filtri di Pandoc
+Filters = -F pandoc-xnos
 
-# File TeX con alcune configurazioni generali
-HEADERS = -H preamble.tex
-
-# File Markdown in ogni subdirectory di "source"
-SOURCES = $(wildcard ./source/*/*.md)
-
-# File PDF in ogni subdirectory di "output"
-OUTPUTS = $(wildcard ./output/*/*.pdf)
+# File Markdown di ogni subdirectory di "source/"
+Sources = $(wildcard ./source/*/*.md)
+# File PDF di ogni subdirectory di "output/"
+Outputs = $(wildcard ./output/*/*.pdf)
 
 # Traduzione di un singolo file 
 %.pdf: %.md
-	@pandoc header.yaml $< ${FILTERS} ${HEADERS} -o $@
+	@pandoc ${Headers} ${Filters} $< -o $@
 	@mv $@ $(subst source, output, $@)
 
-# Traduzione totale
-all: $(foreach file, ${SOURCES}, $(patsubst %.md, %.pdf, ${file}))
-	@echo ${file}
+# Traduzione di tutti i file
+all: $(foreach File, ${Sources}, $(patsubst %.md, %.pdf, ${File}))
+	$(make ${File})
 
-# Pulizia della cartella "output"
+# Pulizia della cartella "output/"
 clean:
-	@rm ${OUTPUTS}
+	@rm -f ${Outputs}
