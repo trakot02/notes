@@ -31,7 +31,6 @@ All'espressione $f(x)=y$ per ogni $y\in{B}$.
 #### Esempio
 
 La funzione $f(x)=x^3-x$ interseca tutte le rette orizzontali almeno una volta, ma incontra tre volte la retta orizzontale $y=0$.
-
 $$
 \begin{tikzpicture}
     \begin{axis}[functions, title = {Funzione suriettiva}]
@@ -46,7 +45,6 @@ $$
 #### Esempio
 
 La funzione $f(x)=e^x$ interseca alcune rette orizzontali una sola volta ma non interseca alcuna retta orizzontale al di sotto di $y=0$.
-
 $$
 \begin{tikzpicture}
     \begin{axis}[functions, title = {Funzione iniettiva}]
@@ -61,7 +59,6 @@ $$
 #### Esempio
 
 La funzione $f(x)=x^3+3x$ interseca tutte le rette orizzontali esattamente una singola volta come $g(x)=x$.
-
 $$
 \begin{tikzpicture}
     \begin{axis}[functions, title = {Funzione biettiva}]
@@ -93,7 +90,6 @@ Per ogni $x_1\in{A},x_2\in{A}$ con $x_1<x_2$.
 #### Esempio
 
 Le funzioni $f(x)=e^x$, $g(x)=x^3$ ed $h(x)=-log_2(x)$ sono rispettivamente: strettamente crescente, non decrescente e strettamente decrescente.
-
 $$
 \begin{tikzpicture}
     \begin{axis}[functions, title = {Funzioni monotone}]
@@ -134,7 +130,6 @@ Quando $f$ è un **polinomio**, possiamo affermare che è pari quando **l'espone
 #### Esempio
 
 Le funzioni $f,g:\mathbb{R}\to{\mathbb{R}}$, definite come $f(x)\coloneqq{x^2},\;g(x)\coloneqq{(x^3}\;\;\forall{x}\in{\mathbb{R}}$ sono rispettivamente: pari e dispari.
-
 $$
 \begin{tikzpicture}
     \begin{axis}[functions, title = {Funzioni pari e dispari}]
@@ -146,16 +141,16 @@ $$
 \end{tikzpicture}
 $$
 
-## Alcune funzioni importanti
+### Alcune funzioni importanti
 
-- Funzioni polinomiali: sono quelle funzioni $\mathbb{R}\to{\mathbb{R}}$ della forma
+- Funzioni polinomiali: sono quelle funzioni $\mathbb{R}\to{\mathbb{R}}$ della forma:
 $$
 f(x)\coloneqq{\sum_{k=0}^{n}c_kx^k}=c_0+c_1x+c_2x^2+\dots+c_nx^n
 $$
 
 $\forall{x}\in{\mathbb{R}}$, dove $n\in{\mathbb{N}}$ e $c_0,c_1,c_2,\dots,c_n$ sono numeri reali dati.
 
-- Funzioni razionali: sono quelle funzioni della forma
+- Funzioni razionali: sono quelle funzioni della forma:
 $$
 f(x)\coloneqq{\frac{P(x)}{Q(x)}}
 $$

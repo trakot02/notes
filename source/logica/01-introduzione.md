@@ -15,8 +15,7 @@ I connettivi logici sono quei simboli che permettono di unire più proposizioni 
 
 ### Connetivo *or*
 
-Data la frase: "Mangio una mela *oppure* una pesca", notiamo che è della forma
-
+Data la frase: "Mangio una mela *oppure* una pesca", notiamo che è della forma:
 $$
 (\alpha\lor\beta)
 $$
@@ -27,10 +26,9 @@ In un dialogo comune il connettivo *or* indica che **solamente una** situazione 
 
 ### Connettivo *implies*
 
-Data la frase: "Il sorgere del Sole *implica* che è giunta l'alba", notiamo che è della forma
-
+Data la frase: "Il sorgere del Sole *implica* che è giunta l'alba", notiamo che è della forma:
 $$
-(\alpha\limplies\beta)
+(\alpha\limp\beta)
 $$
 
 Dove $\alpha,\beta$ sono le due espressioni, e vengono chiamate:
@@ -47,30 +45,28 @@ Quando la premessa non si avvera, l'implicazione viene comunque rispettata perch
 > L'implicazione **non** si avvera quando la premessa è veritiera ma la conclusione no. Questo perché la premessa si è verificata e il legame con la conclusione può essere smentito, per esempio: "Forte pioggia *implica* che il sole sta calando" non è un'implicazione corretta.
 
 Infatti possiamo scrivere che:
-
 $$
-(\alpha\limplies\beta)\iff((\lnot\alpha)\lor\beta)
-$$ {#eq:impl_def}
+(\alpha\limp\beta)\iff((\lnot\alpha)\lor\beta)
+$$ {#eq:impl_significato}
 
 In altre parole, un'implicazione è vera quando o non si avvera la premessa, quando la conclusione è corretta, oppure entrambe.
 
 #### Esercizio
 
-Vogliamo semplificare la proposizione $\phi=((\alpha\limplies\beta)\lor(\beta\limplies\alpha))$.
+Vogliamo semplificare la proposizione $\phi=((\alpha\limp\beta)\lor(\beta\limp\alpha))$.
 
 Svolgimento:
-
 $$
 \begin{aligned}
   \phi
-  &=((\alpha\limplies\beta)\lor(\beta\limplies\alpha))\\
+  &=((\alpha\limp\beta)\lor(\beta\limp\alpha))\\
   &=(((\lnot\alpha)\lor\beta)\lor((\lnot\beta)\lor\alpha))\\
   &=(\alpha\lor\beta\lor(\lnot\alpha)\lor(\lnot\beta))\\
   &=T
 \end{aligned}
-$$ {#eq:impl_example}
+$$ {#eq:impl_esercizio}
 
-Sono presenti tutte le combinazioni di $\alpha$ e $\beta$ e deve avverarsene almeno una per rendere tutto corretto, di conseguenza l'equazione @eq:impl_example è verificata per qualsiasi valore di $\alpha$ e $\beta$.
+Sono presenti tutte le combinazioni di $\alpha$ e $\beta$ e deve avverarsene almeno una per rendere tutto corretto, di conseguenza l'equazione @eq:impl_esercizio è verificata per qualsiasi valore di $\alpha$ e $\beta$.
 
 ## Sintassi e semantica
 
