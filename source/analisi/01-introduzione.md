@@ -72,8 +72,8 @@ Vogliamo calcolare la somma dei numeri interi positivi minori o uguali a cento, 
 $$
 \begin{aligned}
     S&=1+2+\dots+99+100\\
-    S&=100+99+\dots+2+1\\
-    \hline
+    S&=100+99+\dots+2+1\\[5pt]
+    \hline\\
     2S&=101+101+\dots+101+101\\
     &=101\cdot{100}
 \end{aligned}

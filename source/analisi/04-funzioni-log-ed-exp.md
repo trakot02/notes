@@ -13,7 +13,7 @@ $$
                 ymin = -0.75, ymax = 2.75]
         % Funzione y = ln(x)
         \addplot[blue, thick, domain = 0:5.25]{ln(x)}
-            node[at = {(axis cs:4.5,1.80)}]{$f(x)=\log_e(x)$};
+            node[at = {(axis cs: 4.5,1.80)}]{$f(x)=\log_e(x)$};
         % Origine
         \addplot[mark = *] coordinates {(0,0)}
             node[pin = 165: {$O$}]{};
