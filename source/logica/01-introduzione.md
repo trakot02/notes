@@ -55,7 +55,7 @@ In altre parole, un'implicazione è vera quando o non si avvera la premessa, qua
 
 Vogliamo semplificare la proposizione $\phi=((\alpha\limp\beta)\lor(\beta\limp\alpha))$.
 
-Svolgimento:
+*Svolgimento*
 $$
 \begin{aligned}
   \phi

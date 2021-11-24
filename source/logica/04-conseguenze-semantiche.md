@@ -31,7 +31,7 @@ $$ {#eq:conseguenza_semantica}
 
 Vogliamo provare che se $\alpha$ ed $\alpha\limp\beta$ sono vere, allora lo è anche $\beta$, cioè che $\alpha\limp\beta,\alpha\taut{\beta}$.
 
-Svolgimento:
+*Svolgimento*
 $$
 \begin{aligned}
   \valu{\alpha\limp\beta,\alpha}_v=1
@@ -47,7 +47,7 @@ $$
 
 Vogliamo dimostrare che $(\Gamma,\alpha\taut{\beta})\implies(\Gamma\taut{\alpha\limp\beta})$.
 
-Svolgimento:
+*Svolgimento*
 $$
 \begin{aligned}
   \forall{v}\valu{\Gamma,\alpha}_v=1\implies\valu{\beta}_v=1
@@ -96,7 +96,7 @@ Per applicare la sostituzione in modo iterativo, si scorre una proposizione per 
 
 Data $\phi=((p_1\limp(p_5\lor{p_1}))\land{p_3})$, vogliamo sostituire $p_1$ con $\phi$.
 
-Svolgimento:
+*Svolgimento*
 
 > Le occorrenze di $p_1$ sono $(p_1,3),(p_1,8)$, sostituendo $p_1$ con $\psi$ otteniamo: $((\psi\limp(p_5\lor{\psi}))\land{p_3})$.
 

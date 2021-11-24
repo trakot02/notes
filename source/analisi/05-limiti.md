@@ -8,116 +8,71 @@ title: Limiti
 
 La definizione di limite è **fondamentale** per l'analisi matematica.
 
-## Limite finito
+## Limite finito per $x$ tendente a infinito
 
 Sia $f:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$ con $A$ non limitato superiormente, e sia $L$ un numero reale. Si dice che il limite di $f$ per $x$ tendente a $+\infty$ equivale ad $L$ (oppure che $f$ tende ad $L$ per $x$ che tende a $+\infty$), quando:
 $$
 \begin{gathered}
     \forall{\epsilon>0},\;\exists{K>0}\tc{\forall{x\in{A}\text{ con }x\geq{K}}},\\
-    L-\epsilon\leq{f(x)}\leq{L+\epsilon}
+    L-\epsilon\leq{\;f(x)\;}\leq{L+\epsilon}
 \end{gathered}
 $$
 
 ### Dimostrazione
 
-Data una $f:\mathbb{N}\setminus{\{0\}}\to{\mathbb{R}}$ come $f(n)=\frac{1}{n}\;\forall{n\in{\mathbb{N}\setminus{\{0\}}}}$, vogliamo dimostrare che $\lim_{n\to+\infty}f(n)=0$.
-$$
-\begin{tikzpicture}
-    \begin{axis}[functions, title = {Limite finito},
-                xmin = -0.75, xmax = 10.5,
-                ymin = -1.25, ymax = 4.5]
-        % Funzione y = ln(x)
-        \addplot[blue, thick, only marks, domain = 0:11]
-            coordinates {(1,1)(2,1/2)(3,1/3)(4,1/4)(5,1/5)(6,1/6)(7,1/7)(8,1/8)(9,1/9)(10,1/10)}
-            node[at = {(axis cs: 1,1.5)}]{$f(x)$};
-        % Origine
-        \addplot[mark = *] coordinates {(0,0)}
-            node[pin = 125: {$O$}]{};
-        % Targhetta y = L + epsilon
-        \node[black, at = {(axis cs: 9.5,0.8)}]{$y=L+\epsilon$};
-        % Targhetta y = L - epsilon
-        \node[black, at = {(axis cs: 9.5,-0.8)}]{$y=L-\epsilon$};
-        % Area tra y = 2 ed y = 3
-        \addplot[cyan, fill = cyan, fill opacity = 0.05]
-            coordinates {(-2,-0.5)(12,-0.5)(12,0.5)(-2,0.5)(-2,-0.5)};
-        % Segmento x = K
-        \addplot[teal] coordinates {(5,-2)(5,5)};
-        % Targhetta K
-        \node[black, at = {(axis cs: 4.6,-1)}]{$K$};
-    \end{axis}
-\end{tikzpicture}
-$$
+Data una $f:\mathbb{N}\setminus{\{0\}}\to{\mathbb{R}}$ come $f(n)=\frac{1}{n}\;\forall{n\in{\mathbb{N}\setminus{\{0\}}}}$, vogliamo dimostrare che $\lim\limits_{n\to+\infty}f(n)=0$.
 
-Occorre fissare una $\epsilon>0$ **arbitrario**, di conseguenza sappiamo che deve esistere un $K\in{\mathbb{N}}\tc{0<\frac{1}{\epsilon}\leq{K}}$ (per il postulato di Eudosso-Archimede).
+Fissiamo un $\epsilon>0$ arbitrario, e per definizione di limite, esiste un $K$ intero positivo tale che $0<\frac{1}{\epsilon}\leq{K}$ per il postulato di Eudosso-Archimede.
 
 Quindi fissiamo una $n\in{\mathbb{N}}\tc{n\geq{K}}$:
 $$
-\begin{dcases}
-    \frac{1}{n}\leq{\frac{1}{K}\leq{\epsilon}=0+\epsilon}\\
-    \frac{1}{n}\geq{0\geq{-\epsilon=0-\epsilon}}
-\end{dcases}\qquad\square
+\begin{gathered}
+    \begin{dcases}
+        \frac{1}{n}\leq{\frac{1}{K}}\leq{\epsilon}=0+\epsilon\\
+        \frac{1}{n}\geq{0}\geq{-\epsilon=0-\epsilon}
+    \end{dcases}\\
+    \hfill\square
+\end{gathered}
 $$
 
-Perciò abbiamo verificato che $L-\epsilon\leq{f(n)\leq{L+\epsilon}}$ con $L=0$ e possiamo scrivere:
+Perciò abbiamo verificato che $L-\epsilon\leq{\;f(n)\;}\leq{L+\epsilon}$ con $L=0$ e infatti possiamo scrivere:
 $$
 \lim_{n\to{+\infty}}\frac{1}{n}=0
 $$
 
 *Nota bene*
 
-> Questa scrittura è equivalente a $\frac{1}{n}\to{0}\text{ per }n\to{+\infty}$.
+> Questa scrittura è equivalente a $\frac{1}{n}\tto{0}\text{ per }n\to{+\infty}$.
 
-## Limite infinito
+## Limite infinito per $x$ tendente ad infinito
 
-Sia $f:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$ con $A$ non limitato superiormente. Si dice che il limite di $f$ per $x$ tendente a $+\infty$ equivale a $+\infty$ (oppure che $f$ tende a $+\infty$ per $x$ che tende a $+\infty$), quando:
+Sia $f:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$ con $A$ non limitato superiormente. Si dice che il limite di $f$ per $x\to{+\infty}$ equivale a $+\infty$ (oppure che $f$ tende a $+\infty$ per $x\to{+\infty}$), quando:
 $$
-\forall{M>0},\;\exists{K>0}\tc{\forall{x}\in{A}\text{ con }\geq{K}},f(x)\geq{M}
+\forall{M>0},\;\exists{K>0}\tc{\forall{x}\in{A}}\text{ con }\geq{K},f(x)\geq{M}
 $$
 
 Similmente si dice che il limite di una funzione equivale a $-\infty$ quando:
 $$
-\forall{M>0},\;\exists{K>0}\tc{\forall{x}\in{A}\text{ con }\geq{K}},f(x)\leq{-M}
-$$
-$$
-\begin{tikzpicture}
-    \begin{axis}[functions, title = {Limite infinito},
-                xmin = -0.75, xmax = 10.5,
-                ymin = -1.25, ymax = 4.5]
-        % Funzione y = ln(x)
-        \addplot[blue, thick, domain = 0:11]{2*ln(x)}
-            node[at = {(axis cs: 9,3.8)}]{$f(x)$};
-        % Origine
-        \addplot[mark = *] coordinates {(0,0)}
-            node[pin = 125: {$O$}]{};
-        % Targhetta y = L + epsilon
-        \node[black, at = {(axis cs: 9.5,2.5)}]{$y=M$};
-        % Area tra y = 2 ed y = 3
-        \addplot[cyan, fill = cyan, fill opacity = 0.1]
-            coordinates {(-2,3)(12,3)(12,5)(-2,5)(-2,-3)};
-        % Segmento x = K
-        \addplot[teal] coordinates {(6,-2)(6,5)};
-        % Targhetta K
-        \node[black, at = {(axis cs: 5.6,-1)}]{$K$};
-    \end{axis}
-\end{tikzpicture}
+\forall{M>0},\;\exists{K>0}\tc{\forall{x}\in{A}}\text{ con }\geq{K},f(x)\leq{-M}
 $$
 
 #### Esempio
 
-Data $f:\mathbb{N}\to{\mathbb{R}},\;f(n)=n^2+1\;\forall{n\in{\mathbb{N}}}$, dimostriamo $lim_{n\to{+\infty}}=(n^2+1)=+\infty$.
+Data $f:\mathbb{N}\to{\mathbb{R}},\;f(n)=n^2+1\;\forall{n\in{\mathbb{N}}}$, dimostriamo $\lim\limits_{n\to{+\infty}}=(n^2+1)=+\infty$.
 
-Svolgimento: Fissiamo $M>0$ arbitrario, per il quale, dal postulato di Eudosso-Archimede, sappiamo che esiste $K\in{\mathbb{N}}\tc{K\geq{M}}$. Infine consideriamo $n\in{\mathbb{N}}\text{ con }n\geq{K}$:
+*Svolgimento*
+
+> Fissiamo $M>0$ arbitrario, per il quale, dal postulato di Eudosso-Archimede, sappiamo che esiste un $K\in{\mathbb{N}}\tc{K\geq{M}}$. Infine consideriamo $n\in{\mathbb{N}}\text{ con }n\geq{K}$:
 $$
-f(n)=n^2+1\geq{K^2+1\geq{K\geq{M}}}\qquad\square
+\begin{gathered}
+    f(n)=n^2+1\geq{K^2+1}\geq{K}\geq{M}\\
+    \hfill\square
+\end{gathered}
 $$
-
-*Nota bene*
-
-> La disequazione di secondo grado $K^2+1\geq{K}$ è rispettata per qualsiasi $K$ reale.
 
 ## Limite inesistente
 
-Data $f:\mathbb{N}\to{\mathbb{R}},\;f(n)\coloneqq{(-1)^n}$, vale a dire:
+Data $f:\mathbb{N}\to{\mathbb{R}}$ definita come $f(n)\coloneqq{(-1)^n}$, vale a dire:
 $$
 f(n)\coloneqq{
 \begin{dcases}
@@ -126,72 +81,54 @@ f(n)\coloneqq{
 \end{dcases}}
 $$
 
-Il cui grafico è il seguente:
-$$
-\begin{tikzpicture}
-    \begin{axis}[functions, title = {Limite inesistente},
-                xmin = -0.75, xmax = 8.75,
-                ymin = -2.25, ymax = 2.25]
-        % Funzione y = ln(x)
-        \addplot[blue, thick, only marks, domain = 0:9]
-            coordinates {(1,-1)(2,1)(3,-1)(4,1)(5,-1)(6,1)(7,-1)(8,1)(9,-1)}
-            node[at = {(axis cs: 2,1.5)}]{$f(n)$};
-        % Origine
-        \addplot[mark = *] coordinates {(0,0)}
-            node[pin = 125: {$O$}]{};
-        % Area tra y = 2 ed y = 3
-        \addplot[cyan, fill = cyan!50, fill opacity = 0.1]
-            coordinates {(0,0.75)(9,0.75)(9,1.25)(0,1.25)(0,0.75)};
-        \addplot[teal, fill = teal!50, fill opacity = 0.1]
-            coordinates {(0,-0.75)(9,-0.75)(9,-1.25)(0,-1.25)(0,-0.75)};
-    \end{axis}
-\end{tikzpicture}
-$$
-
-È evidente come il $\lim_{n\to{+\infty}}f(n)$ non esista.
+È evidente come il limite non esiste perché la funzione continua ad alternare valori positivi con valori negativi.
 
 ### Dimostrazione
 
-Supponiamo per assurdo che una funzione $f:A\to{\mathbb{R}}$ possieda due limiti  $L$ ed $L'$ quando $x$ tende a $+\infty$. Supponendo che entrambi siano valori **finiti**, prendiamo una $\epsilon>0$ molto piccola, perciò siamo certi che $0<\epsilon<\frac{\;|L-L'|\;}{2}$. Ora, per valori di $x$ molto grandi, la funzione deve essere compresa tra le rette orizzontali $y=L+\epsilon,y=L-\epsilon$ e contemporaneamente anche tra le rette orizzontali $y=L'+\epsilon,y=L'-\epsilon$ il che è una contraddizione, dal momento che la funzione dovrebbe associare allo stesso valore di $x$ due immagini.
+Supponiamo per assurdo che una funzione $f:A\to{\mathbb{R}}$ possieda due limiti  $L$ ed $L'$ quando $x\to{+\infty}$. Supponendo che entrambi siano valori finiti, prendiamo un $\epsilon>0$ molto piccolo, perciò siamo certi che $0<\epsilon<\frac{\;|L-L'|\;}{2}$. Ora, per valori di $x$ molto grandi, la funzione deve essere compresa tra le rette orizzontali $y=L+\epsilon,y=L-\epsilon$ e contemporaneamente anche tra le rette orizzontali $y=L'+\epsilon,y=L'-\epsilon$ il che è una contraddizione, dal momento che la funzione dovrebbe associare allo stesso valore di $x$ due immagini differenti.
 
-Grazie a questo ragionamento si prova che sono assurdi anche i casi $L$ finito, $L'=\pm{\infty}$ ed $L=\pm{\infty},L'=\mp{\infty}$.
+Grazie a questo ragionamento proviamo che sono assurdi anche i casi:
+
+- $L\in{\mathbb{R}},\;L'=\infty$
+- $L=\pm{\infty},\;L'=\mp{\infty}$.
 
 ## Teorema di algebra dei limiti
 
-Siano $f,g:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$ con $A$ non limitato superiormente. Supponiamo che i seguenti limiti:
+Siano $f,g:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$ con $A$ non limitato superiormente. Supponiamo che i seguenti limiti esistano e siano finiti:
 $$
-F\coloneqq{\lim_{x\to{+\infty}}f(x)},\;
-G\coloneqq{\lim_{x\to{+\infty}}g(x)}
-$$
-
-Esistano e siano finiti, allora possiamo affermare che:
-$$
-\begin{array}{rcl}
-    \lim\limits_{x\to{+\infty}}&(f(x)+g(x))&=F+G\\
-    \lim\limits_{x\to{+\infty}}&(f(x)-g(x))&=F-G\\
-    \lim\limits_{x\to{+\infty}}&f(x)\;g(x)&=FG\\
-    \lim\limits_{x\to{+\infty}}&\frac{f(x)}{g(x)}&=\frac{F}{G}
+\begin{array}{rl}
+    F\coloneqq{\lim\limits_{x\to{+\infty}}f(x)},&G\coloneqq{\lim\limits_{x\to{+\infty}}g(x)}
 \end{array}
 $$
 
-Purché nell'ultimo caso $G\neq{0}$.
+Allora possiamo affermare che:
+$$
+\begin{gathered}
+    \lim\limits_{x\to{+\infty}}\Big[f(x)+g(x)\Big]=F+G\\
+    \lim\limits_{x\to{+\infty}}\Big[f(x)-g(x)\Big]=F-G
+\end{gathered}
+$$
+$$
+\begin{gathered}
+    \lim\limits_{x\to{+\infty}}\Big[f(x)\;\cdot{\;g(x)}\Big]=F\;\cdot{\;G}\\
+    \lim\limits_{x\to{+\infty}}\Big[f(x)\div{g(x)}\Big]=F\div{G}
+\end{gathered}
+$$
+
+Purché nel caso del rapporto $G\neq{0}$.
 
 Il teorema viene esteso parzialmente, in alcuni casi dove $F$ oppure $G$ sono infiniti:
 $$
-\begin{array}{rcl}
-    F+\infty=&+\infty&\forall{F\in{\mathbb{R}}},\\
-    F-\infty=&-\infty&\forall{F\in{\mathbb{R}}},\\
-    +\infty+\infty=&+\infty,&\\
-    -\infty-\infty=&-\infty,&\\
-    \infty\cdot{\infty}=&\infty,&\\
-    \frac{F}{\infty}=&0&\forall{F\in{\mathbb{R}}},\\
-    \frac{F}{0}=&\infty&\forall{F\in{\mathbb{R}\setminus{\{0\}}}},\\
-    \frac{0}{\infty}=&0,&\\
-    \frac{\infty}{0}=&\infty,&
+\begin{array}{cc}
+    F+\infty=+\infty\;\;\forall{F\in{\mathbb{R}}},&F-\infty=-\infty\;\;\forall{F\in{\mathbb{R}}},\\
+    +\infty+\infty=+\infty,&-\infty-\infty=-\infty,\\
+    \infty\cdot{\infty}=\infty,\\
+    % \frac{F}{\infty}=&0&\forall{F\in{\mathbb{R}}},\\
+    % \frac{F}{0}=&\infty&\forall{F\in{\mathbb{R}\setminus{\{0\}}}},\\
+    % \frac{0}{\infty}=&0,&\\
+    % \frac{\infty}{0}=&\infty,&
 \end{array}
 $$
-
-Il segno dei prodotti e dei rapporti viene determinato secodo le regole usuali.
 
 *Nota bene*
 
@@ -229,7 +166,7 @@ $$
 
 Dato il limite $\lim\limits_{x\to{+\infty}}(2+\frac{1}{x})$, vogliamo calcolarne il valore.
 
-Svolgimento:
+*Svolgimento*
 $$
 \begin{aligned}
     \lim_{x\to{+\infty}}(2+\frac{1}{x})
@@ -244,7 +181,7 @@ Grazie al teorema di algebra dei limiti possiamo separare il limite della somma 
 
 Dato il limite $\lim\limits_{x\to{+\infty}}(x^2+1)^2$, vogliamo calcolarne il valore.
 
-Svolgimento:
+*Svolgimento*
 $$
 \begin{aligned}
     \lim_{x\to{+\infty}}(x^2+1)^2
@@ -282,7 +219,7 @@ $$
 
 Nello stesso momento però, $L$ è maggiorante di $\{f(x):x\in{A}\}$, pertanto:
 $$
-f(x)\leq{L<L-\epsilon}
+f(x)\leq{L<L+\epsilon}
 $$
 
 Per cui il teorema di monotonia è dimostrato $\square$.
@@ -291,7 +228,7 @@ Per cui il teorema di monotonia è dimostrato $\square$.
 
 Dato il limite $\lim_{x\to{}+\infty}\log{x}$, dimostrare che il suo valore è $+\infty$.
 
-Svolgimento:
+*Svolgimento*
 $$
 \begin{aligned}
     \{\log{x}:x>0\}
@@ -316,7 +253,162 @@ Allora anche possiamo certamente affermare che $\lim\limits_{x\to{+\infty}}g(x)=
 
 ### Dimostrazione
 
+Fissiamo un $\epsilon>0$ qualsiasi, per definizione di limite troviamo $K_f>0\tc{\forall{x\in{A}}}$ con $x\geq{K_f}$:
+$$
+L-\epsilon\leq{f(x)\leq{L+\epsilon}}
+$$
 
+Allo stesso modo troviamo $K_h>0\tc{\forall{x\in{A}}}$ con $x\geq{K_h}$:
+$$
+L-\epsilon\leq{h(x)\leq{L+\epsilon}}
+$$
+
+Sia quindi $K=\max{(K_f,K_h)}$, comunque preso $x\in{A}\tc{x\geq{K}}$ otteniamo:
+$$
+\begin{dcases}
+    g(x)\leq{h(x)\leq{L+\epsilon}}\\
+    g(x)\geq{f(x)\geq{L-\epsilon}}
+\end{dcases}\qquad\square
+$$
+
+### Variante
+
+Date $f,g:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$:
+$$
+\begin{aligned}
+    \text{Se}\;f(x)\geq{g(x)}\text{ e }\lim_{x\to{+\infty}}g(x)=+\infty,&\text{ allora }\lim_{x\to{+\infty}}f(x)=+\infty\\
+    \text{Se}\;f(x)\leq{g(x)}\text{ e }\lim_{x\to{+\infty}}g(x)=-\infty,&\text{ allora }\lim_{x\to{+\infty}}f(x)=-\infty\\
+\end{aligned}
+$$
+
+#### Esempio
+
+Calcolare il limite $\lim\limits_{x\to{+\infty}}\frac{\sin{x}}{x^2+1}$ mediante il teorema del confronto.
+
+*Svolgimento*
+
+> Sappiamo che il limite $\lim\limits_{x\to{+\infty}}(x^2+1)=+\infty$ e anche che $-1\leq{\sin{x}}\leq{1}\;\forall{x\in{\mathbb{R}}}$, infatti:
+$$
+\begin{gathered}
+    \underbrace{\;\frac{-1}{x^2+1}\;}_{-\frac{1}{\infty}=0}\leq{\sin{x}}\leq{\underbrace{\;\frac{1}{x^2+1}\;}_{+\frac{1}{\infty}=0}}\\
+    \text{per $x\to{+\infty}$}
+\end{gathered}
+$$
+
+Di conseguenza, per il teorema del confronto, sappiamo che il risultato del limite è $0$.
+
+#### Esempio
+
+Calcolare il limite $\lim\limits_{x\to{+\infty}}(x^6+\cos^2{(e^x-\log{(|x|)})}$ mediante il teorema del confronto.
+
+*Svolgimento*
+
+> Sappiamo che $x^6\tto{+\infty}$ per $x\to{+\infty}$, di conseguenza:
+$$
+\underbrace{\;x^6+\cos^2{(\dots)\;}}_{f(x)}
+\geq{\underbrace{\;x^6\;}_{g(x)}}\tto{+\infty}\;\text{per $x\to{+\infty}$}
+$$
+
+Per cui, sappiamo che il risultato è $+\infty$.
+
+## Limite qualsiasi per $x$ tendente a meno infinito
+
+Sia $f:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$ con $A$ non limitato inferiormente ed $L\in{\mathbb{R}\cup{\{-\infty,+\infty\}}}$. Si dice che:
+$$
+\begin{gathered}
+    \lim_{x\to{-\infty}}f(x)=L\\
+    \text{Quando}\\
+    \lim_{t\to{+\infty}}f(-t)=L
+\end{gathered}
+$$
+
+## Limite finito per $x$ tendente ad un valore finito
+
+Dato un valore $x_0\in{\mathbb{R}}$ possiamo definire il limite di una funzione $f$ per $x\to{x_0}$.
+
+### Punto di accumulazione
+
+Dati $A\subseteq{\mathbb{R}}$ e $x_0\in{\mathbb{R}}$, chiamiamo $x_0$ *punto di accumulazione* se:
+$$
+\begin{gathered}
+    \forall{\epsilon>0},\exists{x\in{A}}\tc{x\ne{x_0}},\\
+    x_0-\epsilon\leq{x}\leq{x_0+\epsilon}
+\end{gathered}
+$$
+
+#### Esempio
+
+- $0$ è un punto di accumulazione dell'intervallo $(0,1)$
+- Non esiste alcun punto di accumulazione di $\mathbb{N}$
+- L'unico punto di accumulazione di $\{\frac{1}{n}:n\in{\mathbb{Z}},n\geq{1}\}$ è $0$.
+
+*Nota bene*
+
+> Possiamo definire il limite di una funzione per $x\to{x_0}$ se e solamente se $x_0$ è punto di accumulazione del suo dominiio.
+
+Siano $f:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$ ed $x_0\in{\mathbb{R}}$ punto di accumulazione di $A$, quindi si dice che $\lim\limits_{x\to{x_0}}f(x)=L$ quando:
+$$
+\begin{gathered}
+    \forall{\epsilon>0},\exists{\delta>0}\tc{\forall{x\in{A}}}\text{ con }x\ne{x_0}\text{ e }\\
+    x_0-\delta\leq{x}\leq{x_0+\delta}\text{ vale }\\
+    L-\epsilon\leq{\;f(x)\;}\leq{L+\epsilon}
+\end{gathered}
+$$
+
+## Limite infinto per $x$ tendente ad un valore finito
+
+Si dice che $\lim\limits_{x\to{x_0}}f(x)=+\infty$ quando:
+$$
+\begin{gathered}
+    \forall{\epsilon>0},\exists{\delta>0}\tc{\forall{x\in{A}}}\text{ con }x\ne{x_0}\text{ e },\\
+    x_0-\delta\leq{x}\leq{x_0+\delta},\text{ vale }f(x)\geq{M}
+\end{gathered}
+$$
+
+Similmente si dice che vale $-\infty$ quando:
+$$
+\begin{gathered}
+    \forall{\epsilon>0},\exists{\delta>0}\tc{\forall{x\in{A}}}\text{ con }x\ne{x_0}\text{ e },\\
+    x_0-\delta\leq{x}\leq{x_0+\delta},\text{ vale }f(x)\leq{-M}
+\end{gathered}
+$$
+
+Ovviamente il limite può anche non esistere, ma se esiste è unico. Inoltre per definizione $\lim\limits_{x\to{x_0}}f(x)$ non dipende dal valore $f(x_0)$ indipendentemente che la funzione sia definita o meno in quel punto.
+
+#### Esempio
+
+Data la funzione $f:\mathbb{R}\to{\mathbb{R}},\;f(x)\coloneqq{x}\;\forall{x\in{\mathbb{R}}}$ e dato $x_0\in{\mathbb{R}}$. Vogliamo calcolare  il limite $\lim\limits_{x\to{x_0}}x$.
+
+
+Prendiamo $\epsilon>0$ e definiamo $\delta\coloneqq{\epsilon}$, infine consideriamo un $x\in{\mathbb{R}}$ qualsiasi con $x\ne{x_0}$. Per definizione ottengo $x_0-\delta\leq{x}\leq{x_0+\delta}$ e devo dimostrare che vale $x_0-\epsilon\leq{x}\leq{x_0+\epsilon}$.
+
+In questo caso essendo $f(x)=x$ e $\epsilon=\delta$ è dimostrato tautologicamente.
+
+#### Esempio
+
+Data la funzione $g:\mathbb{R}\to{\mathbb{R}},\;g(x)\coloneqq{\begin{dcases}x&\text{se $x\ne{3}$}\\57&\text{se $x=3$}\end{dcases}}$. Vogliamo calcolare il limite.
+$$
+\begin{gathered}
+    \lim_{x\to{3}}g(x)=\lim_{x\to{3}}x=3\\
+    \lim_{x\to{}4}g(x)=\lim_{x\to{4}}x=4
+\end{gathered}
+$$
+
+Infine i teoremi di algebra dei limiti e del confronto si possono estendere anche per $x\to{x_0}$.
+
+## Limiti unilateri
+
+Sia $f:A\subseteq{\mathbb{R}}\to{\mathbb{R}}$ e $x_0$ un punto di accumulazione di $A$, si usa scrivere:
+$$
+\lim_{x\to{x_0^+}}f(x)\coloneqq{\lim_{x\to{x_0}}f^+(x_0)}
+$$
+
+Dove $f^+:A\cap{(x_0,+\infty)\to\mathbb{R}},\;f^+(x)\coloneqq{f(x)\;\forall{x\in{A\cap{(x_0,+\infty)}}}}$. Similmente:
+$$
+\lim_{x\to{x_0^-}}f(x)\coloneqq{\lim_{x\to{x_0}}f^-(x_0)}
+$$
+
+Dove  $f^-:A\cap{(-\infty,x_0)\to\mathbb{R}},\;f^-(x)\coloneqq{f(x)\;\forall{x\in{A\cap{(-\infty,x_0)}}}}$.
 
 ## Successione
 
@@ -365,9 +457,27 @@ Dato un numero reale $k>0$, definiamo la successione $a_n\coloneqq{k^n},\;\foral
 
 Dati un numero reale $k<0$, e la successione $a_n\coloneqq{k^n},\;\forall{n\in{\mathbb{N}}}$, determinare se questa è convergente, infinitesima, divergente od osccillante.
 
-Svolgimento:
+*Svolgimento*
 $$
 \lim\limits_{n\to{+\infty}}(-k)^n\;\text{non esiste}
 $$
 
 Perciò la successione è oscillante come per la funzione $f:\mathbb{N}\to{\mathbb{R}},\;f(n)\coloneqq{(-1)^n}$.
+
+#### Esercizio
+
+Dato $\alpha\in{(-1,1)}$, sia $b_n\coloneqq{\alpha^n}\forall{n\in{\mathbb{N}}}$. Il limite $\lim\limits_{x\to{+\infty}}b_n$ esiste? Se si calcolarlo.
+
+#### Esercizio
+
+Esplicitare la definizione di $\lim\limits_{x\to{+\infty}}f(x)=L$ facendo ricorso ai quantificatori.
+
+*Svolgimento*
+
+> Per qualsiasi $\epsilon$ positivo esiste un valore $K$ positivo tale per cui dato un qualsiasi $x$ del dominio maggiore di $K$ (cioè successiva nell'asse delle ascisse) la funzione sia compresa tra le due rette orizzontali $L-\epsilon$ ed $L+\epsilon$.
+$$
+\begin{gathered}
+    \forall{\epsilon>0},\exists{K>0}\tc{\forall{x\in{A}}}\text{ con }x\geq{K},\\
+    L-\epsilon\leq{f(x)}\leq{L+\epsilon}
+\end{gathered}
+$$

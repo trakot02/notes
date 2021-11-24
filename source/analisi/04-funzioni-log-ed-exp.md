@@ -499,7 +499,7 @@ Definiamo $e=\exp(1)$ e quindi $\forall{b}\in\mathbb{R},\;e^b=\exp(b\cdot\log{e}
 
 #### Esercizio
 
-Dato un numero reale $a\in(0,+\infty)$, dimostrare che $\forall{n}\in{\mathbb{N}}\tc{n\geq{1}},\;\exp(n\cdot\log{a})=\underbrace{a\cdot{a}\cdot{\dots}\cdot{a}}_{n}$. Svolgimento:
+Dato un numero reale $a\in(0,+\infty)$, dimostrare che $\forall{n}\in{\mathbb{N}}\tc{n\geq{1}},\;\exp(n\cdot\log{a})=\underbrace{a\cdot{a}\cdot{\dots}\cdot{a}}_{n}$. *Svolgimento*
 
 1. Passo base: per $n=1$ abbiamo,
     $$

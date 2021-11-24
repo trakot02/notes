@@ -185,7 +185,7 @@ $$
 
 Dimostrare che se $\taut{\alpha\limp(\beta\limp\alpha)}$ allora esiste una derivazione tale per cui vale $\theo{\alpha\limp(\beta\limp\alpha)}$.
 
-Svolgimento:
+*Svolgimento*
 $$
 \begin{aligned}
     \valu{\alpha\limp(\beta\limp\alpha)}_v=1
@@ -211,7 +211,7 @@ $$
 
 Dimostrare che $\theo{(\alpha\land\beta)\limp(\beta\land\alpha)}$.
 
-Svolgimento:
+*Svolgimento*
 $$
 \mathcal{D}=\left[\;
     \begin{prooftree}
