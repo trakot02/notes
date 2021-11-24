@@ -122,11 +122,9 @@ $$
 \begin{array}{cc}
     F+\infty=+\infty\;\;\forall{F\in{\mathbb{R}}},&F-\infty=-\infty\;\;\forall{F\in{\mathbb{R}}},\\
     +\infty+\infty=+\infty,&-\infty-\infty=-\infty,\\
-    \infty\cdot{\infty}=\infty,\\
-    % \frac{F}{\infty}=&0&\forall{F\in{\mathbb{R}}},\\
-    % \frac{F}{0}=&\infty&\forall{F\in{\mathbb{R}\setminus{\{0\}}}},\\
-    % \frac{0}{\infty}=&0,&\\
-    % \frac{\infty}{0}=&\infty,&
+    \infty\cdot{\infty}=\infty,&\\
+    \frac{F}{\infty}=0\forall{F\in{\mathbb{R}}},&\frac{F}{0}=\infty\forall{F\in{\mathbb{R}\setminus{\{0\}}}},\\
+    \frac{0}{\infty}=0,&\frac{\infty}{0}=\infty
 \end{array}
 $$
 
